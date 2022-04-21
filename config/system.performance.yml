@@ -4,8 +4,8 @@ cache:
   page:
     max_age: 0
 css:
-  preprocess: false
-  gzip: false
+  preprocess: true
+  gzip: true
 fast_404:
   enabled: true
   paths: '/\.(?:txt|png|gif|jpe?g|css|js|ico|swf|flv|cgi|bat|pl|dll|exe|asp)$/i'
