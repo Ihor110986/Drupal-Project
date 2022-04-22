@@ -4,13 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
+    - field.field.node.article.field_add_new_movie
+    - field.field.node.article.field_cash_fees
     - field.field.node.article.field_comments
+    - field.field.node.article.field_free_content
     - field.field.node.article.field_image
+    - field.field.node.article.field_release_date_of_the_film
     - field.field.node.article.field_tags
     - image.style.thumbnail
     - node.type.article
   module:
     - comment
+    - datetime
     - image
     - path
     - text
@@ -37,11 +42,35 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_add_new_movie:
+    type: entity_reference_autocomplete
+    weight: 125
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cash_fees:
+    type: number
+    weight: 124
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_comments:
     type: comment_default
     weight: 121
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_free_content:
+    type: boolean_checkbox
+    weight: 122
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_image:
     type: image_image
@@ -50,6 +79,12 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_release_date_of_the_film:
+    type: datetime_default
+    weight: 123
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags

@@ -1,0 +1,20 @@
+uuid: 1ec8a0f9-7943-47d3-9d91-699f1e16f2cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_cash_fees
+field_name: field_cash_fees
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

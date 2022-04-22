@@ -1,0 +1,23 @@
+uuid: add790ef-2543-4df1-aa84-ed63c199a985
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cash_fees
+    - node.type.article
+id: node.article.field_cash_fees
+field_name: field_cash_fees
+entity_type: node
+bundle: article
+label: 'Cash fees'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: integer

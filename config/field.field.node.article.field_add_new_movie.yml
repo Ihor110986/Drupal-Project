@@ -1,0 +1,21 @@
+uuid: 098c2dc9-5980-4a3e-bf9f-84ae07353f0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_new_movie
+    - node.type.article
+id: node.article.field_add_new_movie
+field_name: field_add_new_movie
+entity_type: node
+bundle: article
+label: 'Add new movie'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

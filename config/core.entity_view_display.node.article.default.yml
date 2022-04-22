@@ -5,13 +5,18 @@ dependencies:
   config:
     - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
+    - field.field.node.article.field_add_new_movie
+    - field.field.node.article.field_cash_fees
     - field.field.node.article.field_comments
+    - field.field.node.article.field_free_content
     - field.field.node.article.field_image
+    - field.field.node.article.field_release_date_of_the_film
     - field.field.node.article.field_tags
     - image.style.large
     - node.type.article
   module:
     - comment
+    - datetime
     - image
     - text
     - user
@@ -29,6 +34,23 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_add_new_movie:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_cash_fees:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
   field_comments:
     type: comment_default
     label: visually_hidden
@@ -38,6 +60,16 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  field_free_content:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
   field_image:
     type: image
     label: hidden
@@ -46,6 +78,15 @@ content:
       image_style: large
     third_party_settings: {  }
     weight: -1
+    region: content
+  field_release_date_of_the_film:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 103
     region: content
   field_tags:
     type: entity_reference_label
