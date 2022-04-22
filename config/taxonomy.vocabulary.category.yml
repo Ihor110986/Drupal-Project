@@ -1,0 +1,8 @@
+uuid: 78e066d3-5b1a-4137-b716-98ae7b763e59
+langcode: en
+status: true
+dependencies: {  }
+name: Category
+vid: category
+description: 'Movie''s category '
+weight: 0
