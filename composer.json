@@ -17,11 +17,13 @@
     "require": {
         "composer/installers": "^1.9",
         "drupal/adminimal_admin_toolbar": "^1.11",
+        "drupal/blog": "^3.0",
         "drupal/bootstrap5": "^1.1",
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-project-message": "^9.3",
         "drupal/core-recommended": "^9.3",
         "drupal/text_block": "^1.1",
+        "drupal/yg_news": "^2.0",
         "drush/drush": "^11.0"
     },
     "conflict": {
