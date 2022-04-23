@@ -1,0 +1,12 @@
+uuid: c048329b-816a-4dc7-9df2-dfe771613b3a
+langcode: en
+status: true
+dependencies: {  }
+id: about_us
+label: 'About us'
+recipients:
+  - mynews@com.ua
+reply: ''
+weight: 0
+message: ''
+redirect: ''
