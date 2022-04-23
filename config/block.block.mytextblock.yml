@@ -2,10 +2,8 @@ uuid: 666a2272-0433-45dc-92d6-fac92c1fd745
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:04319e30-65a1-4c7a-84e5-65cbecebd0dc'
   module:
-    - block_content
+    - node
     - system
   theme:
     - bootstrap5
@@ -17,9 +15,9 @@ provider: null
 plugin: 'block_content:04319e30-65a1-4c7a-84e5-65cbecebd0dc'
 settings:
   id: 'block_content:04319e30-65a1-4c7a-84e5-65cbecebd0dc'
-  label: 'My Text Block'
+  label: 'MyNews Block'
   label_display: visible
-  provider: block_content
+  provider: core
   status: true
   info: ''
   view_mode: full
@@ -28,3 +26,10 @@ visibility:
     id: request_path
     negate: false
     pages: Home
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page
