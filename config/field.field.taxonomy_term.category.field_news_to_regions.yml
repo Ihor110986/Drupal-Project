@@ -1,0 +1,21 @@
+uuid: 00e15dc4-e274-4d48-a827-89382cb02ae4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_news_to_regions
+    - taxonomy.vocabulary.category
+  module:
+    - options
+id: taxonomy_term.category.field_news_to_regions
+field_name: field_news_to_regions
+entity_type: taxonomy_term
+bundle: category
+label: 'News to regions'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

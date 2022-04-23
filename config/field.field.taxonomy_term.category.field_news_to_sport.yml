@@ -1,0 +1,21 @@
+uuid: 5dd5fe28-ccd6-480f-90fa-167725c373bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_news_to_sport
+    - taxonomy.vocabulary.category
+  module:
+    - options
+id: taxonomy_term.category.field_news_to_sport
+field_name: field_news_to_sport
+entity_type: taxonomy_term
+bundle: category
+label: 'News to sport'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

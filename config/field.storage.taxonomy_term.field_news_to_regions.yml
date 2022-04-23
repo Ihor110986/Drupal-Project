@@ -1,0 +1,21 @@
+uuid: d2e570ca-4738-4f34-acd4-bc7b1b74a6c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_news_to_regions
+field_name: field_news_to_regions
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
