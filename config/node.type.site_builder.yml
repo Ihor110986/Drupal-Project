@@ -1,0 +1,17 @@
+uuid: 40eeb485-1681-4ddf-8360-6fc44d1d472a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Site_builder
+type: site_builder
+description: 'Information about a site builder'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

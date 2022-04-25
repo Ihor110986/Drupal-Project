@@ -1,4 +1,4 @@
-uuid: b4630153-0b98-4661-a41a-7c0d69171db8
+uuid: 7ec1ed54-ce9e-459d-9039-275d264e8e41
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - file
     - image
     - node
-id: node.field_image
-field_name: field_image
+id: node.field_main_image
+field_name: field_main_image
 entity_type: node
 type: image
 settings:
@@ -16,7 +16,7 @@ settings:
   display_default: false
   uri_scheme: public
   default_image:
-    uuid: ''
+    uuid: null
     alt: ''
     title: ''
     width: null

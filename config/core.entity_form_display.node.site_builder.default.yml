@@ -1,23 +1,26 @@
-uuid: 87894040-79ed-40b1-9496-e92b5d342f98
+uuid: d4018511-5db3-4980-9e3d-dae6cc0a3f7e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.body
-    - node.type.article
+    - field.field.node.site_builder.body
+    - field.field.node.site_builder.field_site_builder_photo
+    - field.field.node.site_builder.field_site_builder_url
+    - image.style.thumbnail
+    - node.type.site_builder
   module:
+    - image
+    - link
     - path
     - text
-_core:
-  default_config_hash: Pzq9mzrsfoPf775qgEU_SUbHSro9pv1ga-Euh1Ykd_k
-id: node.article.default
+id: node.site_builder.default
 targetEntityType: node
-bundle: article
+bundle: site_builder
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 1
+    weight: 121
     region: content
     settings:
       rows: 9
@@ -30,6 +33,22 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_site_builder_photo:
+    type: image_image
+    weight: 123
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_site_builder_url:
+    type: link_default
+    weight: 122
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   path:
     type: path
@@ -60,7 +79,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60

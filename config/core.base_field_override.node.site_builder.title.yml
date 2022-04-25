@@ -1,0 +1,18 @@
+uuid: bf097d59-7e25-4b5a-9baa-eca49d501efc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.site_builder
+id: node.site_builder.title
+field_name: title
+entity_type: node
+bundle: site_builder
+label: 'Site builder name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

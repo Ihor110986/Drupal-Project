@@ -1,0 +1,53 @@
+uuid: 5dbdfd0a-ac7e-455f-bdbc-bd21afcc77cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.site_builder.body
+    - field.field.node.site_builder.field_site_builder_photo
+    - field.field.node.site_builder.field_site_builder_url
+    - node.type.site_builder
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.site_builder.default
+targetEntityType: node
+bundle: site_builder
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_site_builder_photo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_site_builder_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

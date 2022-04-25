@@ -1,0 +1,34 @@
+uuid: 7a542c94-cb8a-416d-b859-5e2d2e97bc0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.site_builder.body
+    - field.field.node.site_builder.field_site_builder_photo
+    - field.field.node.site_builder.field_site_builder_url
+    - node.type.site_builder
+  module:
+    - text
+    - user
+id: node.site_builder.teaser
+targetEntityType: node
+bundle: site_builder
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_site_builder_photo: true
+  field_site_builder_url: true

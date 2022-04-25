@@ -1,36 +1,36 @@
-uuid: cf60673f-6a56-4c27-8a2d-8aa1fc824a0d
+uuid: cf5bc626-b2db-4bfc-ab61-c86612e7cd7a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - node.type.article
+    - field.storage.node.field_site_builder_photo
+    - node.type.site_builder
   module:
     - image
-id: node.article.field_image
-field_name: field_image
+id: node.site_builder.field_site_builder_photo
+field_name: field_site_builder_photo
 entity_type: node
-bundle: article
-label: image
+bundle: site_builder
+label: 'Site builder photo'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:file'
   handler_settings: {  }
-  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_directory: site_builder
   file_extensions: 'png gif jpg jpeg'
-  max_filesize: ''
+  max_filesize: '5 MB'
   max_resolution: ''
-  min_resolution: ''
+  min_resolution: 400x400
   alt_field: true
   alt_field_required: true
   title_field: false
   title_field_required: false
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null
