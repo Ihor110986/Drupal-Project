@@ -6,13 +6,16 @@ dependencies:
     - core.entity_view_display.comment.comment.default
     - field.field.node.news.body
     - field.field.node.news.field_add_comments
+    - field.field.node.news.field_category
     - field.field.node.news.field_display_only_current_news
     - field.field.node.news.field_email
     - field.field.node.news.field_general_image
+    - field.field.node.news.field_news_data
     - field.field.node.news.field_url_news
     - node.type.news
   module:
     - comment
+    - datetime
     - image
     - link
     - text
@@ -37,6 +40,14 @@ content:
       pager_id: 0
     third_party_settings: {  }
     weight: 106
+    region: content
+  field_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 109
     region: content
   field_display_only_current_news:
     type: boolean
@@ -63,6 +74,15 @@ content:
       image_style: ''
     third_party_settings: {  }
     weight: 104
+    region: content
+  field_news_data:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 108
     region: content
   field_url_news:
     type: link
