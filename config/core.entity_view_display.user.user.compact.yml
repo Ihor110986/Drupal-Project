@@ -26,4 +26,5 @@ content:
     weight: 0
     region: content
 hidden:
+  blog__personal_blog_link: true
   member_for: true
