@@ -1,4 +1,4 @@
-uuid: c5280e83-f408-4f34-801a-7b91a6793ea5
+uuid: 95c47e73-70b6-4363-9cd6-fe788e5fddf1
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ field_name: field_category
 entity_type: node
 bundle: news
 label: Category
-description: 'Enter news category that site''s users can want to find'
+description: 'Enter category that site''s users can vant to find news'
 required: false
 translatable: false
 default_value: {  }

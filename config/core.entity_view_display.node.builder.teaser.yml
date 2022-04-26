@@ -1,19 +1,19 @@
-uuid: 7a542c94-cb8a-416d-b859-5e2d2e97bc0c
+uuid: 3588bd80-34de-4a48-bb82-6bbf86a60f66
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.site_builder.body
-    - field.field.node.site_builder.field_site_builder_photo
-    - field.field.node.site_builder.field_site_builder_url
-    - node.type.site_builder
+    - field.field.node.builder.body
+    - field.field.node.builder.field_builder_url
+    - field.field.node.builder.field_main_image
+    - node.type.builder
   module:
     - text
     - user
-id: node.site_builder.teaser
+id: node.builder.teaser
 targetEntityType: node
-bundle: site_builder
+bundle: builder
 mode: teaser
 content:
   body:
@@ -30,5 +30,5 @@ content:
     weight: 100
     region: content
 hidden:
-  field_site_builder_photo: true
-  field_site_builder_url: true
+  field_builder_url: true
+  field_main_image: true

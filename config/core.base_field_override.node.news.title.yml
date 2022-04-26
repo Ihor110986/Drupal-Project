@@ -1,4 +1,4 @@
-uuid: 6a9926d5-b42a-4b26-96f4-604ee6944c98
+uuid: 52e9e008-e628-4a1b-8695-3945e9c09c4f
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ id: node.news.title
 field_name: title
 entity_type: node
 bundle: news
-label: 'News name'
+label: 'Name news'
 description: ''
 required: true
 translatable: true

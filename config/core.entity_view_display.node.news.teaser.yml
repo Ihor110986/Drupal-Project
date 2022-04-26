@@ -1,17 +1,14 @@
-uuid: feb27291-c7ef-4b64-8661-ae6731e3007d
+uuid: 33d61c3b-d45a-44e8-bfda-e15356a8e9a2
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.news.body
+    - field.field.node.news.field_add
     - field.field.node.news.field_category
-    - field.field.node.news.field_comment_on_this_news
     - field.field.node.news.field_date_news
-    - field.field.node.news.field_main_image
-    - field.field.node.news.field_news_url
-    - field.field.node.news.field_submitted_by
-    - field.field.node.news.field_the_news_is_relevant_and_p
+    - field.field.node.news.field_mainimage
     - node.type.news
   module:
     - text
@@ -35,10 +32,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_add: true
   field_category: true
-  field_comment_on_this_news: true
   field_date_news: true
-  field_main_image: true
-  field_news_url: true
-  field_submitted_by: true
-  field_the_news_is_relevant_and_p: true
+  field_mainimage: true

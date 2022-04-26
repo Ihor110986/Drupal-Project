@@ -1,17 +1,17 @@
-uuid: 196ad3b4-e2a4-4afd-9088-2dd0cc41e4bd
+uuid: c62b593e-25a3-4ff5-aa27-7e88fd340984
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_submitted_by
+    - field.storage.node.field_add
+    - node.type.builder
     - node.type.news
-    - node.type.site_builder
-id: node.news.field_submitted_by
-field_name: field_submitted_by
+id: node.news.field_add
+field_name: field_add
 entity_type: node
 bundle: news
-label: 'Submitted by'
-description: 'Choose the category that submitted this news'
+label: Add
+description: 'Choise builder that add the news'
 required: true
 translatable: false
 default_value: {  }
@@ -20,10 +20,10 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      site_builder: site_builder
+      builder: builder
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: news
+    auto_create_bundle: ''
 field_type: entity_reference

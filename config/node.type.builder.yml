@@ -1,4 +1,4 @@
-uuid: 40eeb485-1681-4ddf-8360-6fc44d1d472a
+uuid: 70cc0a27-1c7e-4ff6-9a52-daa8b4e36af9
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,9 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Site_builder
-type: site_builder
-description: 'Information about a site builder'
+name: Builder
+type: builder
+description: 'Information about builder'
 help: ''
 new_revision: true
 preview_mode: 1

@@ -1,16 +1,16 @@
-uuid: 266452b3-2d24-4fb1-9348-c5701c609aab
+uuid: c84511ea-eb43-4705-bb2d-c9d43a23f27f
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_main_image
-    - node.type.news
+    - node.type.builder
   module:
     - image
-id: node.news.field_main_image
+id: node.builder.field_main_image
 field_name: field_main_image
 entity_type: node
-bundle: news
+bundle: builder
 label: 'Main image'
 description: ''
 required: true
@@ -20,7 +20,7 @@ default_value_callback: ''
 settings:
   handler: 'default:file'
   handler_settings: {  }
-  file_directory: News
+  file_directory: Builder
   file_extensions: 'png gif jpg jpeg'
   max_filesize: '5 MB'
   max_resolution: ''

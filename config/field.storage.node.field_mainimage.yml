@@ -1,4 +1,4 @@
-uuid: 73df52ac-987c-47cb-b1b7-36733296d056
+uuid: bbed51f0-705e-4544-9176-be47cf5eacea
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - file
     - image
     - node
-id: node.field_site_builder_photo
-field_name: field_site_builder_photo
+id: node.field_mainimage
+field_name: field_mainimage
 entity_type: node
 type: image
 settings:
@@ -16,11 +16,11 @@ settings:
   display_default: false
   uri_scheme: public
   default_image:
-    uuid: null
-    alt: ''
+    uuid: 9ed9bdf8-0579-4048-af35-6b026b7a93ff
+    alt: MyNews_logo
     title: ''
-    width: null
-    height: null
+    width: 751
+    height: 751
 module: image
 locked: false
 cardinality: 1

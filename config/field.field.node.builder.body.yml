@@ -1,20 +1,18 @@
-uuid: d174d614-aa0b-4e6a-a51d-f2a2e684950e
+uuid: 086429d2-bd6c-4a8d-a44b-a75509994046
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.article
+    - node.type.builder
   module:
     - text
-_core:
-  default_config_hash: IjZnOLWk1Pjq3WRg2pLSA1ERh7Po7izCq_p6UztZr2c
-id: node.article.body
+id: node.builder.body
 field_name: body
 entity_type: node
-bundle: article
+bundle: builder
 label: Body
-description: 'Description site'
+description: ''
 required: false
 translatable: true
 default_value: {  }

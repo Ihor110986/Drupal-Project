@@ -1,4 +1,4 @@
-uuid: 7ec1ed54-ce9e-459d-9039-275d264e8e41
+uuid: ab306f96-5aa3-4665-b952-c46a5b928c25
 langcode: en
 status: true
 dependencies:
@@ -16,11 +16,11 @@ settings:
   display_default: false
   uri_scheme: public
   default_image:
-    uuid: null
-    alt: ''
+    uuid: c924974b-ad6a-40a3-8af0-45d32b9eab64
+    alt: my_photo
     title: ''
-    width: null
-    height: null
+    width: 400
+    height: 400
 module: image
 locked: false
 cardinality: 1

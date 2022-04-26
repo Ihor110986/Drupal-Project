@@ -1,17 +1,17 @@
-uuid: cf5bc626-b2db-4bfc-ab61-c86612e7cd7a
+uuid: 457a697b-8195-474c-b8d5-6f8c607e8502
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_site_builder_photo
-    - node.type.site_builder
+    - field.storage.node.field_mainimage
+    - node.type.news
   module:
     - image
-id: node.site_builder.field_site_builder_photo
-field_name: field_site_builder_photo
+id: node.news.field_mainimage
+field_name: field_mainimage
 entity_type: node
-bundle: site_builder
-label: 'Site builder photo'
+bundle: news
+label: 'Main image'
 description: ''
 required: true
 translatable: false
@@ -20,7 +20,7 @@ default_value_callback: ''
 settings:
   handler: 'default:file'
   handler_settings: {  }
-  file_directory: site_builder
+  file_directory: News
   file_extensions: 'png gif jpg jpeg'
   max_filesize: '5 MB'
   max_resolution: ''

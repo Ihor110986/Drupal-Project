@@ -1,14 +1,14 @@
-uuid: bf097d59-7e25-4b5a-9baa-eca49d501efc
+uuid: 527ffebe-352d-42f4-8ee1-b9693f36eefc
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.site_builder
-id: node.site_builder.title
+    - node.type.builder
+id: node.builder.title
 field_name: title
 entity_type: node
-bundle: site_builder
-label: 'Site builder name'
+bundle: builder
+label: 'Builder name'
 description: ''
 required: true
 translatable: true

@@ -1,17 +1,17 @@
-uuid: bf780f05-4589-485e-b188-752023378a02
+uuid: 58ce67c8-ee90-4605-956d-93f0b2765a77
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_news_url
-    - node.type.news
+    - field.storage.node.field_builder_url
+    - node.type.builder
   module:
     - link
-id: node.news.field_news_url
-field_name: field_news_url
+id: node.builder.field_builder_url
+field_name: field_builder_url
 entity_type: node
-bundle: news
-label: 'News URL'
+bundle: builder
+label: 'Builder URL'
 description: ''
 required: false
 translatable: false
