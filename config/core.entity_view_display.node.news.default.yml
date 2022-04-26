@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.news.field_category
     - field.field.node.news.field_date_news
     - field.field.node.news.field_mainimage
+    - image.style.extra_medium_300x200_
     - node.type.news
   module:
     - datetime
@@ -24,7 +25,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   field_add:
     type: entity_reference_label
@@ -32,7 +33,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 107
+    weight: 4
     region: content
   field_category:
     type: entity_reference_label
@@ -40,7 +41,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 105
+    weight: 3
     region: content
   field_date_news:
     type: datetime_default
@@ -49,20 +50,20 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 104
+    weight: 2
     region: content
   field_mainimage:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: extra_medium_300x200_
     third_party_settings: {  }
-    weight: 103
+    weight: 0
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 5
     region: content
 hidden: {  }

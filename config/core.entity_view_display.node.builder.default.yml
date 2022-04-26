@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.builder.body
     - field.field.node.builder.field_builder_url
     - field.field.node.builder.field_main_image
+    - image.style.extra_medium_300x200_
     - node.type.builder
   module:
     - image
@@ -22,32 +23,32 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
   field_builder_url:
     type: link
-    label: above
+    label: hidden
     settings:
-      trim_length: 80
+      trim_length: null
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
+      rel: '0'
+      target: _blank
     third_party_settings: {  }
-    weight: 102
+    weight: 2
     region: content
   field_main_image:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: extra_medium_300x200_
     third_party_settings: {  }
-    weight: 103
+    weight: 0
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 3
     region: content
 hidden: {  }
