@@ -1,9 +1,9 @@
-uuid: c929d833-9eef-4a7f-bbbc-87593e790cc1
+uuid: df4c09da-43d3-47b8-a4ae-a1c1de749940
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:2c98ebd6-6f86-4af3-8335-9fd26efe2c47'
+    - 'block_content:basic:cb2b7004-b5fe-4f9d-8a2f-162361ac1ca5'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: bootstrap5
 region: sidebar_first
 weight: 0
 provider: null
-plugin: 'block_content:2c98ebd6-6f86-4af3-8335-9fd26efe2c47'
+plugin: 'block_content:cb2b7004-b5fe-4f9d-8a2f-162361ac1ca5'
 settings:
-  id: 'block_content:2c98ebd6-6f86-4af3-8335-9fd26efe2c47'
+  id: 'block_content:cb2b7004-b5fe-4f9d-8a2f-162361ac1ca5'
   label: 'News block'
   label_display: visible
   provider: block_content

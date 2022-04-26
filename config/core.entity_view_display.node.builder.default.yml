@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.builder.body
     - field.field.node.builder.field_builder_url
     - field.field.node.builder.field_main_image
-    - image.style.extra_medium_300x200_
+    - image.style.medium
     - node.type.builder
   module:
     - image
@@ -42,7 +42,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: extra_medium_300x200_
+      image_style: medium
     third_party_settings: {  }
     weight: 0
     region: content
