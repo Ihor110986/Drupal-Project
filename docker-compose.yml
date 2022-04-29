@@ -20,6 +20,8 @@ services:
       - MARIADB_DATABASE=${MYSQL_DB_NAME}
       - MARIADB_USER=${MYSQL_USER}
       - MARIADB_PASSWORD=${MYSQL_PASS}
+    # volumes:
+    #   - my-datavolume:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin
@@ -40,3 +42,6 @@ services:
       - "8080:8080"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
+
+# volumes:
+#  -my-datavolume:

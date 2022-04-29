@@ -8,7 +8,7 @@ dependencies:
     - field.field.node.news.field_category
     - field.field.node.news.field_date_news
     - field.field.node.news.field_mainimage
-    - image.style.thumbnail
+    - image.style.medium
     - node.type.news
   module:
     - datetime
@@ -57,7 +57,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: thumbnail
+      image_style: medium
     third_party_settings: {  }
     weight: 0
     region: content
