@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.news.body
     - field.field.node.news.field_add
     - field.field.node.news.field_category
+    - field.field.node.news.field_comment
     - field.field.node.news.field_date_news
     - field.field.node.news.field_mainimage
     - node.type.news
@@ -34,5 +35,6 @@ content:
 hidden:
   field_add: true
   field_category: true
+  field_comment: true
   field_date_news: true
   field_mainimage: true
