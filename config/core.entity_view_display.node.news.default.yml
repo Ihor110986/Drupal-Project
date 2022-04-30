@@ -3,12 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
     - field.field.node.news.body
     - field.field.node.news.field_add
     - field.field.node.news.field_category
     - field.field.node.news.field_comment
     - field.field.node.news.field_date_news
-    - field.field.node.news.field_mainimage
+    - field.field.node.news.field_main_image
     - image.style.medium
     - node.type.news
   module:
@@ -63,9 +64,9 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_mainimage:
+  field_main_image:
     type: image
-    label: hidden
+    label: above
     settings:
       image_link: ''
       image_style: medium

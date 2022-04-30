@@ -1,4 +1,4 @@
-uuid: 1eec68fc-e4b1-4d68-bdb7-25fbefbece62
+uuid: f9f02b11-0c30-4650-addd-05d0244d66e4
 langcode: en
 status: true
 dependencies:
@@ -11,14 +11,14 @@ dependencies:
 id: views_block__news_block_1
 theme: bootstrap5
 region: sidebar_second
-weight: -7
+weight: 0
 provider: null
 plugin: 'views_block:news-block_1'
 settings:
   id: 'views_block:news-block_1'
-  label: MyNews
-  label_display: '0'
+  label: ''
+  label_display: visible
   provider: views
-  views_label: MyNews
+  views_label: ''
   items_per_page: none
 visibility: {  }
