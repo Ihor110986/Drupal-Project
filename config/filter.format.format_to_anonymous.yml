@@ -1,10 +1,10 @@
-uuid: 4fa9cbaf-18ef-403a-8a4b-7162e0574945
+uuid: 2478511a-62bd-41b6-8b8e-2ea2bf8a78be
 langcode: en
-status: false
+status: true
 dependencies: {  }
-name: 'MyText to Anonymous'
-format: mytext_to_anonymous
-weight: 0
+name: 'Format to Anonymous'
+format: format_to_anonymous
+weight: -3
 filters:
   filter_url:
     id: filter_url

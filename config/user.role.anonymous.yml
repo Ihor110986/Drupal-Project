@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.mytext_to_anonymous
+    - filter.format.format_to_anonymous
     - filter.format.restricted_html
   module:
     - comment
@@ -23,6 +23,6 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'search content'
-  - 'use text format mytext_to_anonymous'
+  - 'use text format format_to_anonymous'
   - 'use text format restricted_html'
   - 'view media'

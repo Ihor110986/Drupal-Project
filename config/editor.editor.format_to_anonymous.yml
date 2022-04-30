@@ -1,12 +1,12 @@
-uuid: 2b8d12ab-718c-45c9-a1bc-164934e0caf2
+uuid: 6122a074-ed1a-4e8b-a4a0-08b7df65150b
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - filter.format.mytext_to_anonymous
+    - filter.format.format_to_anonymous
   module:
     - ckeditor
-format: mytext_to_anonymous
+format: format_to_anonymous
 editor: ckeditor
 settings:
   toolbar:
