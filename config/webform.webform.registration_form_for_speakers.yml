@@ -1,35 +1,40 @@
-uuid: b6ec153a-6f4b-42cc-84bb-c10700c01e86
+uuid: da4011b1-d51c-45f0-8f95-9bfdd113d433
 langcode: en
 status: open
-dependencies:
-  enforced:
-    module:
-      - webform_options_custom
-_core:
-  default_config_hash: u2nxAjRY4llyL_rbyHGMbAD4r-zggCEHniCtumx9D0c
+dependencies: {  }
+weight: 0
 open: null
 close: null
-weight: 0
-uid: null
+uid: 1
 template: false
 archive: false
-id: example_options_custom
-title: 'Example: Custom Options'
-description: 'Example of a custom options element.'
-category: Example
-elements: |
-  states:
-    '#type': 'webform_options_custom:us_states'
-    '#title': 'U.S. States'
-    '#required': true
-  button:
-    '#type': 'webform_options_custom:buttons'
-    '#title': 'Buttons'
-    '#required': true
-    '#options':
-      one: One -- This is the number 1.
-      two: Two -- This is the number 2.
-      three:  Three -- This is the number 3.
+id: registration_form_for_speakers
+title: 'Registration form for Speakers'
+description: 'Registration form for Speakers'
+category: ''
+elements: |-
+  speaker_s_name:
+    '#type': textfield
+    '#title': 'Speaker''s name'
+  email_address:
+    '#type': textfield
+    '#title': 'Email Address'
+  the_topic_of_the_report:
+    '#type': textarea
+    '#title': 'The topic of the report'
+  speaker_s_phone:
+    '#type': tel
+    '#title': 'Speaker''s phone'
+  short_description_of_the_report:
+    '#type': textarea
+    '#title': 'Short description of the report'
+  upload_presentation_files:
+    '#type': webform_document_file
+    '#title': 'Upload presentation files'
+    '#multiple': true
+    '#uri_scheme': public
+    '#file_placeholder': 'Upload presentation files'
+    '#file_extensions': 'pdf pptx '
 css: ''
 javascript: ''
 settings:
@@ -42,11 +47,11 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: source_entity_webform
+  form_title: both
   form_submit_once: false
-  form_exception_message: ''
   form_open_message: ''
   form_close_message: ''
+  form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
@@ -56,31 +61,36 @@ settings:
   form_prepopulate_source_entity: false
   form_prepopulate_source_entity_required: false
   form_prepopulate_source_entity_type: ''
-  form_reset: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: false
   form_disable_inline_errors: false
   form_required: false
-  form_unsaved: false
-  form_disable_back: false
-  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_reset: false
   form_access_denied: default
   form_access_denied_title: ''
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
   form_method: ''
   form_action: ''
-  form_attributes: {  }
   share: false
   share_node: false
   share_theme_name: ''
   share_title: true
   share_page_body_attributes: {  }
   submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
   submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace: {  }
   submission_user_columns: {  }
@@ -89,11 +99,6 @@ settings:
   submission_access_denied_title: ''
   submission_access_denied_message: ''
   submission_access_denied_attributes: {  }
-  submission_exception_message: ''
-  submission_locked_message: ''
-  submission_excluded_elements: {  }
-  submission_exclude_empty: false
-  submission_exclude_empty_checkbox: false
   previous_submission_message: ''
   previous_submissions_message: ''
   autofill: false
@@ -104,20 +109,20 @@ settings:
   wizard_progress_percentage: false
   wizard_progress_link: false
   wizard_progress_states: false
-  wizard_auto_forward: true
-  wizard_auto_forward_hide_next_button: false
-  wizard_keyboard: true
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
-  preview: 1
+  preview: 0
   preview_label: ''
   preview_title: ''
   preview_message: ''
@@ -132,10 +137,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: message
+  confirmation_type: page
+  confirmation_url: ''
   confirmation_title: ''
   confirmation_message: ''
-  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
