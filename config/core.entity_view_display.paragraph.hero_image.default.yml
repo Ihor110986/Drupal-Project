@@ -1,0 +1,46 @@
+uuid: be040902-9827-4fac-a4f8-6ff416d25251
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_image.field_image
+    - field.field.paragraph.hero_image.field_image_text
+    - field.field.paragraph.hero_image.field_link
+    - paragraphs.paragraphs_type.hero_image
+  module:
+    - image
+    - link
+id: paragraph.hero_image.default
+targetEntityType: paragraph
+bundle: hero_image
+mode: default
+content:
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image_text:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }
