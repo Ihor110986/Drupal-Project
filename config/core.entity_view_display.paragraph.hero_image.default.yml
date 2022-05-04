@@ -22,7 +22,7 @@ content:
       image_link: ''
       image_style: ''
     third_party_settings: {  }
-    weight: 0
+    weight: 3
     region: content
   field_image_text:
     type: basic_string

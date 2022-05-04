@@ -1,4 +1,4 @@
-uuid: e0dbcde4-6412-42b8-90ed-fff982d3894c
+uuid: f0f0411c-a248-40d7-88f2-a6efaeca84f4
 langcode: en
 status: true
 dependencies:
@@ -23,7 +23,7 @@ settings:
     height: null
 module: image
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -24,6 +24,7 @@
         "drupal/core-recommended": "^9.3",
         "drupal/paragraphs": "^1.14",
         "drupal/text_block": "^1.1",
+        "drupal/webform": "^6.1",
         "drupal/yg_news": "^2.0",
         "drush/drush": "^11.0"
     },
