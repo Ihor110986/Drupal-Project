@@ -1,4 +1,4 @@
-uuid: da4011b1-d51c-45f0-8f95-9bfdd113d433
+uuid: 29fd6cc7-69fb-47b2-b73e-1ed385c83fde
 langcode: en
 status: open
 dependencies: {  }
@@ -8,33 +8,22 @@ close: null
 uid: 1
 template: false
 archive: false
-id: registration_form_for_speakers
-title: 'Registration form for Speakers'
-description: 'Registration form for Speakers'
+id: registration_form_for_participan
+title: 'Registration form for Participants'
+description: 'Registration form for Participants'
 category: ''
 elements: |-
-  speaker_s_name:
+  name_of_the_participant:
     '#type': textfield
-    '#title': 'Speaker''s name'
+    '#title': 'Name of the participant'
   email_address:
-    '#type': textfield
+    '#type': webform_email_multiple
     '#title': 'Email Address'
-  speaker_s_phone:
-    '#type': tel
-    '#title': 'Speaker''s phone'
-  the_topic_of_the_report:
-    '#type': textarea
-    '#title': 'The topic of the report'
-  short_description_of_the_report:
-    '#type': textarea
-    '#title': 'Short description of the report'
-  upload_presentation_files:
-    '#type': webform_document_file
-    '#title': 'Upload presentation files'
-    '#multiple': true
-    '#uri_scheme': public
-    '#file_placeholder': 'Upload presentation files'
-    '#file_extensions': 'pdf pptx '
+  participant_s_phone_number:
+    '#type': webform_telephone
+    '#title': 'Participant''s phone number'
+    '#type__access': false
+    '#ext__access': false
 css: ''
 javascript: ''
 settings:
