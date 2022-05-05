@@ -1,18 +1,18 @@
-uuid: 9d48ecd8-774e-4e0f-b308-4e11e05f3751
+uuid: 6ae8ce44-f910-44bc-b65b-6bd7db7a83a4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_my_paragraph
-    - node.type.page
-    - paragraphs.paragraphs_type.hero_image
+    - field.storage.node.field_card
+    - node.type.card
+    - paragraphs.paragraphs_type.card
   module:
     - entity_reference_revisions
-id: node.page.field_my_paragraph
-field_name: field_my_paragraph
+id: node.card.field_card
+field_name: field_card
 entity_type: node
-bundle: page
-label: 'My Paragraph'
+bundle: card
+label: Card
 description: ''
 required: false
 translatable: false
@@ -22,10 +22,13 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      hero_image: hero_image
+      card: card
     negate: 0
     target_bundles_drag_drop:
-      hero_image:
-        weight: 2
+      card:
+        weight: 3
         enabled: true
+      hero_image:
+        weight: 4
+        enabled: false
 field_type: entity_reference_revisions

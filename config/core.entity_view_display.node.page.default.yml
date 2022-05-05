@@ -4,10 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_my_paragraph
     - node.type.page
   module:
-    - entity_reference_revisions
+    - text
     - user
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
@@ -16,15 +15,16 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  field_my_paragraph:
-    type: entity_reference_revisions_entity_view
+  body:
+    type: text_default
     label: above
-    settings:
-      view_mode: default
-      link: ''
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
-hidden:
-  body: true
-  links: true
+hidden: {  }

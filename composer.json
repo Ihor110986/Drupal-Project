@@ -23,6 +23,7 @@
         "drupal/core-project-message": "^9.3",
         "drupal/core-recommended": "^9.3",
         "drupal/paragraphs": "^1.14",
+        "drupal/radix": "^4.11",
         "drupal/swiftmailer": "^2.2",
         "drupal/text_block": "^1.1",
         "drupal/webform": "^6.1",

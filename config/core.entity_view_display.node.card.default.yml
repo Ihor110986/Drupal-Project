@@ -1,0 +1,26 @@
+uuid: 42248fc7-f90e-47c5-998a-497649403680
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.card.field_card
+    - node.type.card
+  module:
+    - entity_reference_revisions
+    - user
+id: node.card.default
+targetEntityType: node
+bundle: card
+mode: default
+content:
+  field_card:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  links: true

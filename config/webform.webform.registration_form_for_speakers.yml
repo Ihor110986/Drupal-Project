@@ -17,11 +17,12 @@ elements: |-
     '#type': textfield
     '#title': 'Speaker''s name'
   email_address:
-    '#type': textfield
+    '#type': webform_email_multiple
     '#title': 'Email Address'
   speaker_s_phone:
     '#type': tel
     '#title': 'Speaker''s phone'
+    '#international': true
   the_topic_of_the_report:
     '#type': textarea
     '#title': 'The topic of the report'
