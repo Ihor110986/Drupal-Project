@@ -1,0 +1,25 @@
+uuid: 2b086bd7-4736-4d1d-8c14-730fe7d107be
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c93a385a-74c0-4c06-bb63-0bc4c4829496'
+  module:
+    - block_content
+  theme:
+    - bootstrap5
+id: mynews
+theme: bootstrap5
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'block_content:c93a385a-74c0-4c06-bb63-0bc4c4829496'
+settings:
+  id: 'block_content:c93a385a-74c0-4c06-bb63-0bc4c4829496'
+  label: myNews
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
