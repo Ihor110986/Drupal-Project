@@ -1,0 +1,19 @@
+uuid: 12b5f5f3-1086-4eea-8908-4481abb8fee1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_card
+    - paragraphs.paragraphs_type.product_card
+id: paragraph.product_card.field_title_card
+field_name: field_title_card
+entity_type: paragraph
+bundle: product_card
+label: 'Title card'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
