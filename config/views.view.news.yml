@@ -8,6 +8,7 @@ dependencies:
     - node.type.builder
     - node.type.news
     - node.type.page
+    - node.type.webform
     - system.menu.main
     - taxonomy.vocabulary.category
   module:
@@ -290,11 +291,11 @@ display:
         - 'config:field.storage.node.field_main_image'
   block_1:
     id: block_1
-    display_title: News
+    display_title: 'Choose a category:'
     display_plugin: block
     position: 4
     display_options:
-      title: News
+      title: 'Choose a category:'
       fields:
         field_main_image:
           id: field_main_image
@@ -459,6 +460,7 @@ display:
             page: page
             builder: builder
             news: news
+            webform: webform
           group: 1
           exposed: true
           expose:
@@ -472,7 +474,7 @@ display:
             identifier: type
             required: true
             remember: true
-            multiple: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
