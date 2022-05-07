@@ -1,31 +1,22 @@
-uuid: 8cf2bfca-07ab-4d01-8502-c4f41e70c0c9
+uuid: 2cfaca75-22fe-47af-b9d0-cb1fc12ecd64
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.card.field__link
-    - field.field.paragraph.card.field_description
-    - field.field.paragraph.card.field_image_
-    - field.field.paragraph.card.field_price
-    - field.field.paragraph.card.field_title
-    - image.style.medium
-    - paragraphs.paragraphs_type.card
+    - field.field.paragraph.mybanner.field_description
+    - field.field.paragraph.mybanner.field_image
+    - field.field.paragraph.mybanner.field_link
+    - field.field.paragraph.mybanner.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.mybanner
   module:
     - image
     - link
-id: paragraph.card.default
+id: paragraph.mybanner.default
 targetEntityType: paragraph
-bundle: card
+bundle: mybanner
 mode: default
 content:
-  field__link:
-    type: link_default
-    weight: 4
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
   field_description:
     type: string_textarea
     weight: 2
@@ -34,20 +25,21 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_image_:
+  field_image:
     type: image_image
-    weight: 5
+    weight: 0
     region: content
     settings:
       progress_indicator: throbber
-      preview_image_style: medium
+      preview_image_style: thumbnail
     third_party_settings: {  }
-  field_price:
-    type: number
+  field_link:
+    type: link_default
     weight: 3
     region: content
     settings:
-      placeholder: ''
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_title:
     type: string_textfield

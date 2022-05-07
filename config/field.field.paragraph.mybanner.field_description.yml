@@ -1,14 +1,14 @@
-uuid: f8d58b9a-628e-41cc-81c2-2052aabd1c04
+uuid: ffe74458-c400-4ba4-b796-85a1dffbb38b
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_description
-    - paragraphs.paragraphs_type.card
-id: paragraph.card.field_description
+    - paragraphs.paragraphs_type.mybanner
+id: paragraph.mybanner.field_description
 field_name: field_description
 entity_type: paragraph
-bundle: card
+bundle: mybanner
 label: Description
 description: ''
 required: false

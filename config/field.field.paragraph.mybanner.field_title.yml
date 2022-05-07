@@ -1,14 +1,14 @@
-uuid: 6ea6f013-9bbd-456d-988f-a080a85977f1
+uuid: b9921e64-f936-4c69-a31a-7a71b45459a1
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_title
-    - paragraphs.paragraphs_type.card
-id: paragraph.card.field_title
+    - paragraphs.paragraphs_type.mybanner
+id: paragraph.mybanner.field_title
 field_name: field_title
 entity_type: paragraph
-bundle: card
+bundle: mybanner
 label: Title
 description: ''
 required: true

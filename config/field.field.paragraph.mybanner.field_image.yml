@@ -1,16 +1,16 @@
-uuid: 04227f34-69a8-4c8f-b104-c8ee8a82e484
+uuid: a31f102b-b157-4119-94e4-625e8356b3be
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_image
-    - paragraphs.paragraphs_type.hero_image
+    - paragraphs.paragraphs_type.mybanner
   module:
     - image
-id: paragraph.hero_image.field_image
+id: paragraph.mybanner.field_image
 field_name: field_image
 entity_type: paragraph
-bundle: hero_image
+bundle: mybanner
 label: Image
 description: ''
 required: false
@@ -20,11 +20,11 @@ default_value_callback: ''
 settings:
   handler: 'default:file'
   handler_settings: {  }
-  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_directory: MyBanner
   file_extensions: 'png gif jpg jpeg'
-  max_filesize: ''
+  max_filesize: '5 mb'
   max_resolution: ''
-  min_resolution: ''
+  min_resolution: 400x400
   alt_field: true
   alt_field_required: true
   title_field: false

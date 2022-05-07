@@ -1,9 +1,9 @@
-uuid: 603af038-d9a9-49b8-857e-7598233b939e
+uuid: 6eff6c91-96d7-4af7-8678-f9a3b5c59217
 langcode: en
 status: true
 dependencies: {  }
-id: card
-label: Card
+id: mybanner
+label: MyBanner
 icon_uuid: null
 icon_default: null
 description: ''
