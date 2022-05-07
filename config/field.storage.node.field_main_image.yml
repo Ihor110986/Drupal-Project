@@ -16,7 +16,7 @@ settings:
   display_default: false
   uri_scheme: public
   default_image:
-    uuid: c924974b-ad6a-40a3-8af0-45d32b9eab64
+    uuid: ''
     alt: my_photo
     title: ''
     width: 400

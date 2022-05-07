@@ -13,7 +13,7 @@ entity_type: node
 bundle: news
 label: 'Main image'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
@@ -30,7 +30,7 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: bc0620b1-2a67-48af-a2b6-031feee7b430
+    uuid: ''
     alt: ''
     title: ''
     width: 751

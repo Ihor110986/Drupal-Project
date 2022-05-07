@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.builder.body
     - field.field.node.builder.field_builder_url
     - field.field.node.builder.field_main_image
-    - image.style.thumbnail
+    - image.style.medium
     - node.type.builder
   module:
     - image
@@ -48,7 +48,7 @@ content:
     region: content
     settings:
       progress_indicator: throbber
-      preview_image_style: thumbnail
+      preview_image_style: medium
     third_party_settings: {  }
   path:
     type: path
