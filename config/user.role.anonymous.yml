@@ -5,9 +5,11 @@ dependencies:
   config:
     - filter.format.format_to_anonymous
     - filter.format.restricted_html
+    - workflows.workflow.editorial
   module:
     - comment
     - contact
+    - content_moderation
     - filter
     - media
     - search
@@ -23,6 +25,7 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'search content'
+  - 'use editorial transition publish'
   - 'use text format format_to_anonymous'
   - 'use text format restricted_html'
   - 'view media'
