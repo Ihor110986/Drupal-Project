@@ -1,17 +1,17 @@
-uuid: f8c4564a-2c68-477a-a68b-c14bc5cfe7c9
+uuid: 9fb78e24-3663-4f00-92c5-7d5b7550bf82
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.page
-id: node.page.title
+    - node.type.webform
+id: node.webform.title
 field_name: title
 entity_type: node
-bundle: page
-label: 'Basic page'
+bundle: webform
+label: Title
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

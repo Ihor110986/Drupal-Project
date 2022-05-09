@@ -1,18 +1,20 @@
-uuid: f8c4564a-2c68-477a-a68b-c14bc5cfe7c9
+uuid: 1405a1a5-bbd1-407a-b52b-47dd47c3f5ea
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.page
-id: node.page.title
-field_name: title
+  module:
+    - path
+id: node.page.path
+field_name: path
 entity_type: node
 bundle: page
-label: 'Basic page'
+label: 'URL alias'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: path

@@ -1,14 +1,14 @@
-uuid: f8c4564a-2c68-477a-a68b-c14bc5cfe7c9
+uuid: 12e85657-8d55-4d9c-8331-2624b4f82e89
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.page
-id: node.page.title
-field_name: title
-entity_type: node
-bundle: page
-label: 'Basic page'
+    - taxonomy.vocabulary.tags
+id: taxonomy_term.tags.name
+field_name: name
+entity_type: taxonomy_term
+bundle: tags
+label: Name
 description: ''
 required: true
 translatable: false
