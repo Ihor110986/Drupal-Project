@@ -14,5 +14,5 @@ third_party_settings:
 id: node.builder
 target_entity_type_id: node
 target_bundle: builder
-default_langcode: site_default
+default_langcode: uk
 language_alterable: true
