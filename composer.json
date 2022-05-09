@@ -28,7 +28,9 @@
         "drupal/radix": "^4.11",
         "drupal/swiftmailer": "^2.2",
         "drupal/text_block": "^1.1",
+        "drupal/token": "^1.10",
         "drupal/webform": "^6.1",
+        "drupal/workflows_field": "^2.0@alpha",
         "drupal/yg_news": "^2.0",
         "drush/drush": "^11.0"
     },
