@@ -16,6 +16,11 @@ targetEntityType: node
 bundle: webform
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   webform:
     type: webform_entity_reference_entity_view
     label: hidden
@@ -26,4 +31,5 @@ content:
     region: content
 hidden:
   body: true
+  langcode: true
   links: true

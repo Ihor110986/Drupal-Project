@@ -29,3 +29,4 @@ content:
     region: content
 hidden:
   blog__personal_blog_link: true
+  langcode: true
