@@ -2,10 +2,6 @@ uuid: 2b086bd7-4736-4d1d-8c14-730fe7d107be
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:c93a385a-74c0-4c06-bb63-0bc4c4829496'
-  module:
-    - block_content
   theme:
     - bootstrap5
 id: mynews
