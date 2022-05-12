@@ -6,17 +6,11 @@ url:
   source: path_prefix
   prefixes:
     en: ''
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    es: es
-    uk: uk
->>>>>>> b9102d88147bd26557662fa363b7f765375a8ef3
->>>>>>> dbd4f89afa9d3a3233f6fd6e72daef790a99f002
     '': null
+    uk: uk
+    es: es
   domains:
     en: ''
-    es: ''
     uk: ''
+    es: ''
 selected_langcode: site_default
