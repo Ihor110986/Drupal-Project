@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: zzwJizGfDlkKImG1258YEOw96U0a7WdJ72WaFryHj3A
+google_credential_location: ../MyDrupalCredential-1234abcdef.json
+google_project_id: myProjectId
+language: en
+drupal2google_languages: zh-hans|zh
