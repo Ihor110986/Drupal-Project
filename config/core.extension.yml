@@ -36,6 +36,7 @@ module:
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
+  metatag: 0
   node: 0
   options: 0
   page_cache: 0
@@ -45,6 +46,9 @@ module:
   rdf: 0
   search: 0
   shortcut: 0
+  simple_sitemap: 0
+  simple_sitemap_engines: 0
+  simple_sitemap_views: 0
   system: 0
   taxonomy: 0
   text: 0
