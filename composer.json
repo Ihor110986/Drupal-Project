@@ -17,6 +17,7 @@
     "require": {
         "composer/installers": "^1.9",
         "drupal/adminimal_admin_toolbar": "^1.11",
+        "drupal/allowed_languages": "^2.0@alpha",
         "drupal/blog": "^3.0",
         "drupal/bootstrap4": "^2.1",
         "drupal/bootstrap5": "^1.1",
@@ -24,8 +25,10 @@
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-project-message": "^9.3",
         "drupal/core-recommended": "^9.3",
+        "drupal/metatag": "^1.19",
         "drupal/paragraphs": "^1.14",
         "drupal/radix": "^4.11",
+        "drupal/simple_sitemap": "^4.1",
         "drupal/swiftmailer": "^2.2",
         "drupal/text_block": "^1.1",
         "drupal/token": "^1.10",

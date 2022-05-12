@@ -48,7 +48,7 @@ type_settings:
         - draft
         - moderation
       to: moderation
-      weight: -1
+      weight: 2
     publish:
       label: Publish
       from:
