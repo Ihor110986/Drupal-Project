@@ -1,0 +1,50 @@
+display:
+  default:
+    display_title: Головне
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Застосувати
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Перша'
+            last: 'Остання »'
+          expose:
+            items_per_page_label: 'Елементів на сторінку'
+            items_per_page_options_all_label: '- Усе -'
+            offset_label: Зміщення
+      fields:
+        title:
+          label: Заголовок
+          separator: ', '
+        langcode:
+          label: Від
+          separator: ', '
+        translation_target_language:
+          label: До
+        translation_status:
+          label: 'Стан перекладу'
+        translation_changed:
+          label: Змінено
+      filters:
+        langcode:
+          expose:
+            label: 'Вихідна мова'
+        content_translation_outdated:
+          expose:
+            label: 'Переклад застарів'
+        translation_outdated:
+          expose:
+            label: Застарілий
+        translation_status:
+          expose:
+            label: 'Стан перекладу'
+  page_1:
+    display_title: Сторінка

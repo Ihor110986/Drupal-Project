@@ -34,6 +34,7 @@
         "drupal/taxonomy_translator": "^1.0@beta",
         "drupal/text_block": "^1.1",
         "drupal/token": "^1.10",
+        "drupal/translation_views": "^1.0@alpha",
         "drupal/webform": "^6.1",
         "drupal/workflows_field": "^2.0@alpha",
         "drupal/yg_news": "^2.0",
