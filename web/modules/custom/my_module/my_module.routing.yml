@@ -9,16 +9,8 @@ my_module.my:
 my_module.latest_news:
   path: '/news/latest'
   defaults:
-    _controller: '\Drupal\my_module\Controller\MyController::latest_news'
+    _controller: '\Drupal\my_module\Controller\MyNewsController::latest_news'
     _title: 'Latest news'
   requirements:
     _permission: 'view latest news page'
-
-my_module.add_news:
-  path: '/add-news'
-  defaults:
-    _controller: '\Drupal\my_module\Controller\MyController::add_news'
-    _title: 'Add news'
-  requirements:
-    _permission: 'Add news'
 
