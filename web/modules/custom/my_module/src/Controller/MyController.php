@@ -24,3 +24,4 @@ class MyController {
         return $create;
     }
 }
+?>
