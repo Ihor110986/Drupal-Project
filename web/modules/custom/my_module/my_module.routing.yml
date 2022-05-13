@@ -1,0 +1,7 @@
+my_module.my:
+  path: '/my/page'
+  defaults:
+    _controller: '\Drupal\my_module\Controller\MyController::my'
+    _title: 'Welcome to My Module in Drupal 9'
+  requirements:
+    _permission: 'access content'
