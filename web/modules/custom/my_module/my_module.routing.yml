@@ -5,3 +5,12 @@ my_module.my:
     _title: 'Welcome to My Module in Drupal 9'
   requirements:
     _permission: 'access content'
+
+my_module.latest_news:
+  path: '/news/latest'
+  defaults:
+    _controller: '\Drupal\my_module\Controller\MyController::latest_news'
+    _title: 'Latest news'
+  requirements:
+    _permission: 'view latest news page'
+
