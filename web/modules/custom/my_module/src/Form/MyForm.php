@@ -56,6 +56,19 @@ class MyForm extends FormBase {
       '#required' => TRUE,
     ];
 
+    $form['Category'] = [
+      '#type' => 'entity_autocomplete',
+      '#target_type' => 'taxonomy_term',
+      '#title' => $this->t('Category reference field'),
+      '#description' => $this->t('The description of the field.'),
+      '#default_value' => '',
+      '#tags' => TRUE,
+      '#selection_settings' => [
+        'target_bundles' => ['news_to_ukraine', 'news_to_world', 'news_to_sport', 'news_to_it', 'news_to_show_business'],
+      ],
+      '#weight' => '0',
+    ];
+
     $form['accept'] = [
       '#type' => 'checkbox',
       '#title' => $this
