@@ -122,16 +122,18 @@ class MyForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
 
-    // Display the results
-    // Call the Static Service Container wrapper
-    // We should inject the messenger service, but its beyond the scope
-    // of this example.
-    $messenger = \Drupal::messenger();
-    $messenger->addMessage('Title: ' . $form_state->getValue('title'));
-    $messenger->addMessage('Accept: ' . $form_state->getValue('accept'));
+    $news = \Drupal::entityTypeManager()->getStorage('node')->create(['type' => 'news',
+        'title' => $form_state->getValue('title'),
+        'field_news_text' => $form_state->getValue('text'),
+        'uid' => \Drupal::currentUser()->id(),
+        'status' => 0,
+        ]);
+        $news->save();
 
-    // Redirect to home.
-    $form_state->setRedirect('<front>');
+        $message = \Drupal::messenger();
+        $message->addMessage('News with id ' . $news->id() . ' was created and now waiting for publishing');
+
+        $form_state->setRedirect('<front>');
+    }
   }
 
-}
