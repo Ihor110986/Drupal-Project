@@ -1,7 +1,7 @@
 view latest news page:
   title: 'Access to latest news'
-  description: 'Access to latest news.'
+  description: 'Access to latest news'
 
 add news:
-  title: 'Add news'
-  description: 'Add news'
+  title: 'Access for moderators'
+  description: 'Access for moderators'

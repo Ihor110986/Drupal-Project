@@ -20,5 +20,5 @@ my_module.add_news:
     _form: '\Drupal\my_module\Form\MyForm'
     _title: 'Add news'
   requirements:
-    _permission: 'Add news'
+    _permission: 'Access for moderators'
 
