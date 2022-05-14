@@ -2,6 +2,8 @@ uuid: 2b086bd7-4736-4d1d-8c14-730fe7d107be
 langcode: en
 status: true
 dependencies:
+  module:
+    - language
   theme:
     - bootstrap5
 id: mynews
@@ -14,8 +16,15 @@ settings:
   id: 'block_content:c93a385a-74c0-4c06-bb63-0bc4c4829496'
   label: myNews
   label_display: visible
-  provider: block_content
+  provider: core
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en

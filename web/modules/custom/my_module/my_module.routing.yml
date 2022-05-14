@@ -14,3 +14,11 @@ my_module.latest_news:
   requirements:
     _permission: 'view latest news page'
 
+my_module.add_news:
+  path: '/add-news'
+  defaults:
+    _form: '\Drupal\my_module\Form\MyForm'
+    _title: 'Add news'
+  requirements:
+    _permission: 'Add news'
+

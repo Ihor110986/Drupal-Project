@@ -6,16 +6,16 @@ class MyNewsController {
         $myEntytyStorage = \Drupal::entityTypeManager()->getStorage('node');
         $data = $myEntytyStorage->getQuery()
             ->condition('status', 1)
-            ->condition('type', 'News')
+            ->condition('type', 'news')
             ->sort('created', 'DESC')
             ->range(0,1)
             ->execute();
-        $entity_type = 'News';
-        $view_mode = 'Full content';
-        $creator = \Drupal::entityTypeManager()->getViewBuilder($entity_type);
+        $entity_type = 'node';
+        $view_mode = 'teaser';
+        $builder = \Drupal::entityTypeManager()->getViewBuilder($entity_type);
         $storage = \Drupal::entityTypeManager()->getStorage($entity_type);
         $news = $storage->load(reset($data));
-        $create = $creator->view($news, $view_mode);
+        $create = $builder->view($news, $view_mode);
         return $create;
     }
 }
