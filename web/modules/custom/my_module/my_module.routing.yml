@@ -22,3 +22,14 @@ my_module.add_news:
   requirements:
     _permission: 'Access for moderators'
 
+my_module.admin_settings:
+  path: '/admin/config/news-order'
+  defaults:
+    _form: '\Drupal\my_module\Form\ModuleConfigurationForm'
+    _title: 'The order of news output'
+  requirements:
+    _permission: 'administer site configuration'
+
+  
+  
+

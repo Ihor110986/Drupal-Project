@@ -5,3 +5,8 @@ view latest news page:
 add news:
   title: 'Access for moderators'
   description: 'Access for moderators'
+
+admin settings:
+  title: 'administer site configuration'
+  description: 'administer site configuration'
+
