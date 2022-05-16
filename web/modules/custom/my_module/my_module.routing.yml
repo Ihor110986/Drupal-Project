@@ -30,6 +30,14 @@ my_module.admin_settings:
   requirements:
     _permission: 'administer site configuration'
 
+my_module.settings:
+  path: '/admin/config/my_module/settings'
+  defaults:
+    _form: '\Drupal\my_module\Form\MyModuleSettingsForm'
+    _title: 'Example form'
+  requirements:
+    _permission: 'administer site configuration'
+
   
   
 
