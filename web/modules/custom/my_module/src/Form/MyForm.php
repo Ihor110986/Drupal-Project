@@ -50,7 +50,8 @@ class MyForm extends FormBase {
     ];
 
     $form['text'] = [
-      '#type' => 'textarea',
+      '#type' => 'text_format',
+      '#format' => 'Full_html',
       '#title' => $this->t('Text'),
       '#description' => $this->t('Enter the text of the news. Note that the text must be at least 10 characters in length.'),
       '#required' => TRUE,
@@ -113,10 +114,10 @@ class MyForm extends FormBase {
       $form_state->setErrorByName('title', $this->t('The title must be at least 10 characters long.'));
     }
 
-    if (strlen($text) < 10) {
-      // Set an error for the form element with a key of "text".
-      $form_state->setErrorByName('text', $this->t('The text must be at least 10 characters long.'));
-    }
+    // if (strlen($text) < 10) {
+    //   // Set an error for the form element with a key of "text".
+    //   $form_state->setErrorByName('text', $this->t('The text must be at least 10 characters long.'));
+    // }
 
     if (empty($accept)) {
       // Set an error for the form element with a key of "accept".
