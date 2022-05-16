@@ -64,7 +64,7 @@ class MyForm extends FormBase {
       '#default_value' => '',
       '#tags' => TRUE,
       '#selection_settings' => [
-        'target_bundles' => ['news_to_ukraine', 'news_to_world', 'news_to_sport', 'news_to_it', 'news_to_show_business'],
+        'target_bundles' => ['Category'],
       ],
       '#weight' => '0',
     ];
