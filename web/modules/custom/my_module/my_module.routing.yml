@@ -38,6 +38,14 @@ my_module.settings:
   requirements:
     _permission: 'administer site configuration'
 
+my_module.content:
+  path: '/hello'
+  defaults:
+    _controller: '\Drupal\my_module\Controller\MyModuleController::index'
+    _title: 'Create a custom page in Drupal 9!'
+  requirements:
+    _permission: 'access content'
+
   
   
 

@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @param $existing
+ * @param $type
+ * @param $theme
+ * @param $path
+ * @return array
+ */
+function my_module_theme($existing, $type, $theme, $path) {
+    return [
+        'my_module' => [
+            'variables' => ['users' => NULL],
+        ],
+    ];
+}
