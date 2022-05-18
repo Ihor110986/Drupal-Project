@@ -14,8 +14,8 @@ my_module.get_category:
   requirements:
     _permission: 'access content'
 
-my_module.config_news:
-  path: '/config-news'
+my_module.news:
+  path: '/news'
   defaults:
     _controller: '\Drupal\my_module\Controller\MyNewsConfigController::order_news'
     _title: 'News'

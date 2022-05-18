@@ -1,4 +1,4 @@
-my_module_news.settings:
+my_news.settings:
   type: config_object
   label: 'News order'
   mapping:
