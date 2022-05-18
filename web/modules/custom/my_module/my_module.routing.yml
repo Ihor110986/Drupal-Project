@@ -6,6 +6,14 @@ my_module.my:
   requirements:
     _permission: 'access content'
 
+my_module.get_category:
+  path: '/news/category/{category_id}'
+  defaults:
+    _controller: '\Drupal\my_module\Controller\MyNewsCategoryController::get_category'
+    _title: 'News categories'
+  requirements:
+    _permission: 'access content'
+
 my_module.latest_news:
   path: '/news/latest'
   defaults:
