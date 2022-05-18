@@ -14,6 +14,14 @@ my_module.get_category:
   requirements:
     _permission: 'access content'
 
+my_module.config_news:
+  path: '/config-news'
+  defaults:
+    _controller: '\Drupal\my_module\Controller\MyNewsConfigController::order_news'
+    _title: 'News'
+  requirements:
+    _permission: 'access content'
+
 my_module.latest_news:
   path: '/news/latest'
   defaults:
@@ -30,29 +38,13 @@ my_module.add_news:
   requirements:
     _permission: 'Access for moderators'
 
-my_module.admin_settings:
-  path: '/admin/config/news-order'
+my_module_news_order.settings:
+  path: '/admin/config/news/order/settings'
   defaults:
-    _form: '\Drupal\my_module\Form\ModuleConfigurationForm'
+    _form: '\Drupal\my_module\Form\MyModuleConfigNewsOrderForm'
     _title: 'The order of news output'
   requirements:
     _permission: 'administer site configuration'
-
-my_module.settings:
-  path: '/admin/config/my_module/settings'
-  defaults:
-    _form: '\Drupal\my_module\Form\MyModuleSettingsForm'
-    _title: 'Example form'
-  requirements:
-    _permission: 'administer site configuration'
-
-my_module.content:
-  path: '/hello'
-  defaults:
-    _controller: '\Drupal\my_module\Controller\MyModuleController::index'
-    _title: 'Create a custom page in Drupal 9!'
-  requirements:
-    _permission: 'access content'
 
   
   

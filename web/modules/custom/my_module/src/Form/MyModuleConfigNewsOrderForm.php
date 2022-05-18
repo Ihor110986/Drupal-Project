@@ -8,13 +8,13 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Defines a form that configures forms module settings.
  */
-class ModuleConfigurationForm extends ConfigFormBase {
+class MyModuleConfigNewsOrderForm extends ConfigFormBase {
 
   /**
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'my_module_admin_settings';
+    return 'order_news_form';
   }
 
   /**
@@ -22,7 +22,7 @@ class ModuleConfigurationForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'my_module.admin_settings',
+      'my_module_news_order.settings',
     ];
   }
 
@@ -30,7 +30,7 @@ class ModuleConfigurationForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('my_module.admin_settings');
+    $config = $this->config('my_module_news_order.settings');
     $form['filter_field'] = [
       '#type' => 'checkboxes',
       '#title' => $this->t('News order:'),
@@ -45,7 +45,7 @@ class ModuleConfigurationForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->config('my_module.admin_settings')
+    $this->config('my_module_news_order.settings')
       ->set('news_order', $form_state->getValue('filter_field'))
       ->save();
     parent::submitForm($form, $form_state);
