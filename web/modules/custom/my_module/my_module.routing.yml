@@ -46,6 +46,13 @@ my_module_news_order.settings:
   requirements:
     _permission: 'administer site configuration'
 
+my_module.template:
+  path: '/template'
+  defaults:
+    _controller: '\Drupal\my_module\Controller\MyModuleTemplateController::content'
+    _title: 'Template'
+  requirements: 
+    _permission: 'access content'
   
   
 

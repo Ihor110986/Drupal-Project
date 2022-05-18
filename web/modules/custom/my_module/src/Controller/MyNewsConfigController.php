@@ -6,7 +6,7 @@ class MyNewsConfigController {
 
     public function order_news() {
         $config = \Drupal::config('my_module_news_order.settings');
-        $order = $config->get('news_filter');
+        $order = $config->get('news_order');
     
         $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
     
