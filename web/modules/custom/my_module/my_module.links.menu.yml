@@ -1,0 +1,4 @@
+# my_page:
+#   title: 'My page'
+#   route_page: 'my_module_my'
+#   menu_name: main  

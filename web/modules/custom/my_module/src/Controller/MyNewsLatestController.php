@@ -1,7 +1,7 @@
 <?php
 namespace Drupal\my_module\Controller;
 
-class MyNewsController {
+class MyNewsLatestController {
     public function latest_news() {
         $myEntytyStorage = \Drupal::entityTypeManager()->getStorage('node');
         $data = $myEntytyStorage->getQuery()

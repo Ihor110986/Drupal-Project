@@ -34,7 +34,7 @@ class ModuleConfigurationForm extends ConfigFormBase {
     $form['filter_field'] = [
       '#type' => 'checkboxes',
       '#title' => $this->t('News order:'),
-      '#options' => array('Create date' => 'By create date', 'Update date' => 'By update date'),
+      '#options' => array('created' => 'By create date', 'changed' => 'By update date'),
       '#default_value' => $config->get('news_order'),
       '#required' => TRUE,
     ];
@@ -46,7 +46,7 @@ class ModuleConfigurationForm extends ConfigFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->config('my_module.admin_settings')
-      ->set('variable_name', $form_state->getValue('news_order'))
+      ->set('news_order', $form_state->getValue('filter_field'))
       ->save();
     parent::submitForm($form, $form_state);
   }
