@@ -22,7 +22,15 @@ content:
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
+    region: content
+  field_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
     region: content
   field_main_image:
     type: image
@@ -31,17 +39,16 @@ content:
       image_link: ''
       image_style: ''
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
 hidden:
   body: true
   field_add: true
-  field_category: true
   field_comment: true
   field_date_news: true
   langcode: true
