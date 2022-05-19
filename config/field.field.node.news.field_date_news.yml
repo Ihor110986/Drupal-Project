@@ -14,7 +14,7 @@ bundle: news
 label: 'Date news'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value:
   -
     default_date_type: now

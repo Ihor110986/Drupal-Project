@@ -1,18 +1,20 @@
-uuid: 52e9e008-e628-4a1b-8695-3945e9c09c4f
+uuid: caaa0775-1514-4476-bf35-836276744704
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.news
-id: node.news.title
-field_name: title
+  module:
+    - path
+id: node.news.path
+field_name: path
 entity_type: node
 bundle: news
-label: 'Name news'
+label: 'URL alias'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string
+field_type: path

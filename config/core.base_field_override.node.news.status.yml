@@ -1,14 +1,14 @@
-uuid: bc660415-daf5-4660-973e-7641c5ffe712
+uuid: e1694674-71ae-4001-8d80-7556ea1ea01f
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.news
-id: node.news.sticky
-field_name: sticky
+id: node.news.status
+field_name: status
 entity_type: node
 bundle: news
-label: 'Sticky at top of lists'
+label: Published
 description: ''
 required: false
 translatable: false
