@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
+
 
 function my_module_theme($existing, $type, $theme, $path) {
     return [
@@ -25,20 +27,30 @@ function my_module_form_alter(&$form, FormStateInterface $form_state, $form_id) 
     }
   }
 
-  /**
-   * Submit Handler for user_login_form.
-   * if the user has the role of moderator - redirect to the page /admin/content,
-   * otherwise redirect to the main.
-   *
-   * @param $form
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   */
-  function my_module_submit_handler(&$form, FormStateInterface $form_state) {
-    $role = \Drupal::currentUser()->getRoles();
-    if (in_array('moderator', $role)) {
-      $form_state->setRedirect('system.admin_content');
-    } else {
-      $form_state->setRedirect('<front>');
-    }
-
+/**
+ * Submit Handler for user_login_form.
+ * if the user has the role of moderator - redirect to the page /admin/content,
+ * otherwise redirect to the main.
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function my_module_submit_handler(&$form, FormStateInterface $form_state) {
+  $role = \Drupal::currentUser()->getRoles();
+  if (in_array('moderator', $role)) {
+    $form_state->setRedirect('system.admin_content');
+  } else {
+    $form_state->setRedirect('<front>');
   }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function my_module_entity_presave(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'news' && $entity->field_date_news->value == '') {
+    if (!$entity->isNew() && $entity->get('status')->getValue() != $entity->original->get('status')->getValue()) {
+      $entity->field_date_news->value = date('m-d-Y') . 'T' . date('H:i');
+  }
+}
+}
