@@ -1,7 +1,11 @@
 <?php
 
-use Symfony\Component\HttpFoundation\RedirectResponse;
-use Drupal\Core\Url;
+/**
+ * @file
+ * Main file for hooks and custom functions.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
 
 function my_module_theme($existing, $type, $theme, $path) {
     return [
@@ -11,15 +15,30 @@ function my_module_theme($existing, $type, $theme, $path) {
     ];
 }
 
-/**
- * Implements hook_user_login().
- */
 
-function my_module_user_login($account) {
-    $roles = $account->getRoles();
-    if(in_array('moderator', $roles)){
-    $response = new RedirectResponse('/admin/content');
-    $response->send();
-    return;
+/**
+ * Implements hook_form_alter().
+ */
+function my_module_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+    if ($form_id == 'user_login_form') {
+      $form['#submit'][] = 'my_module_submit_handler';
+    }
   }
-}
+
+  /**
+   * Submit Handler for user_login_form.
+   * if the user has the role of moderator - redirect to the page /admin/content,
+   * otherwise redirect to the main.
+   *
+   * @param $form
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   */
+  function my_module_submit_handler(&$form, FormStateInterface $form_state) {
+    $role = \Drupal::currentUser()->getRoles();
+    if (in_array('moderator', $role)) {
+      $form_state->setRedirect('system.admin_content');
+    } else {
+      $form_state->setRedirect('<front>');
+    }
+
+  }
