@@ -1,4 +1,4 @@
-# my_page:
-#   title: 'My page'
-#   route_page: 'my_module_my'
-#   menu_name: main  
+news_page:
+   title: 'News'
+   route_page: 'my_module.view_news'
+   menu_name: main
