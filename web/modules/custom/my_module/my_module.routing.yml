@@ -51,8 +51,17 @@ my_module.template:
   defaults:
     _controller: '\Drupal\my_module\Controller\MyModuleTemplateController::content'
     _title: 'Template'
-  requirements: 
+  requirements:
     _permission: 'access content'
-  
-  
+
+register.form:
+  path: '/register_form'
+  defaults:
+    _title: 'Register form'
+    _form: '\Drupal\my_module\Form\RegisterForm'
+  requirements:
+    _permission: 'access content'
+
+
+
 

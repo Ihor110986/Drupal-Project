@@ -2,3 +2,8 @@ news_page:
    title: 'News'
    route_page: 'my_module.view_news'
    menu_name: main
+
+register_form:
+  title: Register form
+  route_page: 'my_module.register_news'
+  menu_name: main
