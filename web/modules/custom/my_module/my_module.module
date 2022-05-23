@@ -10,6 +10,8 @@ use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
 
 
 
@@ -66,9 +68,36 @@ function my_module_entity_presave(EntityInterface $entity) {
 
 function my_module_entity_field_access($operation, FieldDefinitionInterface $field_definition, AccountInterface $account, FieldItemListInterface $items = NULL) {
   if ($operation == 'edit' && $field_definition->getName() == 'field_date_news'
-    && !$account->hasPermission('view field publication date')) {
+    && !$account->hasPermission('view field date news')) {
     return AccessResult::forbidden();
   }
 
   return AccessResult::neutral();
 }
+
+/**
+ * Implements hook_entity_access().
+ */
+function bda_m_entity_access(EntityInterface $entity, $operation, AccountInterface $account) {
+  if ($entity->getEntityTypeId() == 'node'
+    && $entity->getType() == 'news'
+    && $operation == 'view') {
+    $entityDate = $entity->get('field_publication_date')->date->getTimestamp();
+    $now = new DrupalDateTime('now');
+    $now->setTimezone(new \DateTimeZone(DateTimeItemInterface::STORAGE_TIMEZONE));
+    $now = $now->getTimestamp();
+    if ($entityDate > $now) {
+      if (in_array('moderator', $account->getRoles()) ||
+        $account->id() == $entity->getOwnerId()) {
+        return AccessResult::neutral();
+      }
+      else {
+        return AccessResult::forbidden();
+      }
+    }
+    return AccessResult::neutral();
+  }
+}
+
+
+
