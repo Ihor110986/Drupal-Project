@@ -21,8 +21,16 @@ function my_module_theme($existing, $type, $theme, $path) {
         'my-module-template' => [
             'variables' => ['test_var' => NULL],
         ],
+      'my_example_news' => [
+        'variables' => [
+          'title' => NULL,
+          'content' => NULL,
+          'category' => NULL,
+        ],
+      ],
     ];
 }
+
 
 
 /**

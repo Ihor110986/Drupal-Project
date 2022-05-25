@@ -22,6 +22,14 @@ my_module.news:
   requirements:
     _permission: 'access content'
 
+bda.view_news:
+  path: 'news/view'
+  defaults:
+    _controller: '\Drupal\my_module\Controller\NewsController::view'
+    _title: 'View news'
+  requirements:
+    _permission: 'access content'
+
 my_module.latest_news:
   path: '/news/latest'
   defaults:
