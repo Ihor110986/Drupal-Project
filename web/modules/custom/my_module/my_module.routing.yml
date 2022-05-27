@@ -13,7 +13,7 @@ my_module.my:
 #    _title: 'News categories'
 #  requirements:
 #    _permission: 'access content'
-#
+
 #my_module.news:
 #  path: '/news'
 #  defaults:
@@ -21,7 +21,7 @@ my_module.my:
 #    _title: 'News'
 #  requirements:
 #    _permission: 'access content'
-#
+
 #bda.view_news:
 #  path: 'news/view'
 #  defaults:
@@ -29,7 +29,7 @@ my_module.my:
 #    _title: 'View news'
 #  requirements:
 #    _permission: 'access content'
-#
+
 my_module.latest_news:
   path: '/news/latest'
   defaults:
@@ -37,15 +37,15 @@ my_module.latest_news:
     _title: 'Latest news'
   requirements:
     _permission: 'view latest news page'
-#
-#my_module.add_news:
-#  path: '/add-news'
-#  defaults:
-#    _form: '\Drupal\my_module\Form\MyForm'
-#    _title: 'Add news'
-#  requirements:
-#    _permission: 'Access for moderators'
-#
+
+my_module.add_news:
+  path: '/add-news'
+  defaults:
+    _form: '\Drupal\my_module\Form\MyForm'
+    _title: 'Add news'
+  requirements:
+    _permission: 'Access for moderators'
+
 #my_module_news_order.settings:
 #  path: '/admin/config/news/order/settings'
 #  defaults:
