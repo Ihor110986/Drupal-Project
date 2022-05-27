@@ -30,13 +30,13 @@ my_module.my:
 #  requirements:
 #    _permission: 'access content'
 #
-#my_module.latest_news:
-#  path: '/news/latest'
-#  defaults:
-#    _controller: '\Drupal\my_module\Controller\MyNewsLatestController::latest_news'
-#    _title: 'Latest news'
-#  requirements:
-#    _permission: 'view latest news page'
+my_module.latest_news:
+  path: '/news/latest'
+  defaults:
+    _controller: '\Drupal\my_module\Controller\MyNewsLatestController::latest_news'
+    _title: 'Latest news'
+  requirements:
+    _permission: 'view latest news page'
 #
 #my_module.add_news:
 #  path: '/add-news'

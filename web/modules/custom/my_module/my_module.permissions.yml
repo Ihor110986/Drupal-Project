@@ -1,6 +1,6 @@
-#view latest news page:
-#  title: 'Access to latest news'
-#  description: 'Access to latest news'
+view latest news page:
+  title: 'Access to latest news'
+  description: 'Access to latest news'
 
 #add news:
 #  title: 'Access for moderators'
