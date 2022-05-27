@@ -6,69 +6,69 @@ my_module.my:
   requirements:
     _permission: 'access content'
 
-my_module.get_category:
-  path: '/news/category/{category_id}'
-  defaults:
-    _controller: '\Drupal\my_module\Controller\MyNewsCategoryController::get_category'
-    _title: 'News categories'
-  requirements:
-    _permission: 'access content'
-
-my_module.news:
-  path: '/news'
-  defaults:
-    _controller: '\Drupal\my_module\Controller\MyNewsConfigController::order_news'
-    _title: 'News'
-  requirements:
-    _permission: 'access content'
-
-bda.view_news:
-  path: 'news/view'
-  defaults:
-    _controller: '\Drupal\my_module\Controller\NewsController::view'
-    _title: 'View news'
-  requirements:
-    _permission: 'access content'
-
-my_module.latest_news:
-  path: '/news/latest'
-  defaults:
-    _controller: '\Drupal\my_module\Controller\MyNewsLatestController::latest_news'
-    _title: 'Latest news'
-  requirements:
-    _permission: 'view latest news page'
-
-my_module.add_news:
-  path: '/add-news'
-  defaults:
-    _form: '\Drupal\my_module\Form\MyForm'
-    _title: 'Add news'
-  requirements:
-    _permission: 'Access for moderators'
-
-my_module_news_order.settings:
-  path: '/admin/config/news/order/settings'
-  defaults:
-    _form: '\Drupal\my_module\Form\MyModuleConfigNewsOrderForm'
-    _title: 'The order of news output'
-  requirements:
-    _permission: 'administer site configuration'
-
-my_module.template:
-  path: '/template'
-  defaults:
-    _controller: '\Drupal\my_module\Controller\MyModuleTemplateController::content'
-    _title: 'Template'
-  requirements:
-    _permission: 'access content'
-
-register.form:
-  path: '/register_form'
-  defaults:
-    _title: 'Register form'
-    _form: '\Drupal\my_module\Form\RegisterForm'
-  requirements:
-    _permission: 'access content'
+#my_module.get_category:
+#  path: '/news/category/{category_id}'
+#  defaults:
+#    _controller: '\Drupal\my_module\Controller\MyNewsCategoryController::get_category'
+#    _title: 'News categories'
+#  requirements:
+#    _permission: 'access content'
+#
+#my_module.news:
+#  path: '/news'
+#  defaults:
+#    _controller: '\Drupal\my_module\Controller\MyNewsConfigController::order_news'
+#    _title: 'News'
+#  requirements:
+#    _permission: 'access content'
+#
+#bda.view_news:
+#  path: 'news/view'
+#  defaults:
+#    _controller: '\Drupal\my_module\Controller\NewsController::view'
+#    _title: 'View news'
+#  requirements:
+#    _permission: 'access content'
+#
+#my_module.latest_news:
+#  path: '/news/latest'
+#  defaults:
+#    _controller: '\Drupal\my_module\Controller\MyNewsLatestController::latest_news'
+#    _title: 'Latest news'
+#  requirements:
+#    _permission: 'view latest news page'
+#
+#my_module.add_news:
+#  path: '/add-news'
+#  defaults:
+#    _form: '\Drupal\my_module\Form\MyForm'
+#    _title: 'Add news'
+#  requirements:
+#    _permission: 'Access for moderators'
+#
+#my_module_news_order.settings:
+#  path: '/admin/config/news/order/settings'
+#  defaults:
+#    _form: '\Drupal\my_module\Form\MyModuleConfigNewsOrderForm'
+#    _title: 'The order of news output'
+#  requirements:
+#    _permission: 'administer site configuration'
+#
+#my_module.template:
+#  path: '/template'
+#  defaults:
+#    _controller: '\Drupal\my_module\Controller\MyModuleTemplateController::content'
+#    _title: 'Template'
+#  requirements:
+#    _permission: 'access content'
+#
+#register.form:
+#  path: '/register_form'
+#  defaults:
+#    _title: 'Register form'
+#    _form: '\Drupal\my_module\Form\RegisterForm'
+#  requirements:
+#    _permission: 'access content'
 
 
 
