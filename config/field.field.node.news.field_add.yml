@@ -1,0 +1,29 @@
+uuid: 6e4d9e57-35b5-4318-9223-d06983d4001a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add
+    - node.type.builders
+    - node.type.news
+id: node.news.field_add
+field_name: field_add
+entity_type: node
+bundle: news
+label: Add
+description: 'Choose builers that published this news'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      builders: builders
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

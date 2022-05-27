@@ -1,10 +1,12 @@
-uuid: 4b1ae9ab-41ac-4a47-9c4a-638674329240
+uuid: de4b40ed-dd52-4d7a-a155-4c699a2e5d7f
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.news.body
-    - field.field.node.news.field_image2
+    - field.field.node.news.field_add
+    - field.field.node.news.field_category
+    - field.field.node.news.field_news_image
     - node.type.news
   module:
     - image
@@ -22,7 +24,23 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
-  field_image2:
+  field_add:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_news_image:
     type: image
     label: above
     settings:

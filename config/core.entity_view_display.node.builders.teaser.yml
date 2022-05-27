@@ -1,20 +1,18 @@
-uuid: d26a3d4e-df22-4c58-ba16-5cd188490fa0
+uuid: d6b77c3b-6345-4bd5-a077-42a4674ec5b1
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.news.body
-    - field.field.node.news.field_add
-    - field.field.node.news.field_category
-    - field.field.node.news.field_news_image
-    - node.type.news
+    - field.field.node.builders.body
+    - field.field.node.builders.field_builders_image
+    - node.type.builders
   module:
     - text
     - user
-id: node.news.teaser
+id: node.builders.teaser
 targetEntityType: node
-bundle: news
+bundle: builders
 mode: teaser
 content:
   body:
@@ -31,6 +29,4 @@ content:
     weight: 100
     region: content
 hidden:
-  field_add: true
-  field_category: true
-  field_news_image: true
+  field_builders_image: true

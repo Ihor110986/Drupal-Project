@@ -1,17 +1,17 @@
-uuid: 0c6639c7-14fd-47b8-98fd-8da5d0bc95d3
+uuid: 1ea1a692-5ebb-4926-876b-8e37db3d0e83
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image2
-    - node.type.news
+    - field.storage.node.field_builders_image
+    - node.type.builders
   module:
     - image
-id: node.news.field_image2
-field_name: field_image2
+id: node.builders.field_builders_image
+field_name: field_builders_image
 entity_type: node
-bundle: news
-label: Image
+bundle: builders
+label: 'Builders image'
 description: ''
 required: false
 translatable: false
@@ -20,7 +20,7 @@ default_value_callback: ''
 settings:
   handler: 'default:file'
   handler_settings: {  }
-  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_directory: builders_image
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
   max_resolution: ''

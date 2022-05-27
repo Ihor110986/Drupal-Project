@@ -1,0 +1,39 @@
+uuid: a158d8d0-961d-4466-8011-9e88888a59f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.builders.body
+    - field.field.node.builders.field_builders_image
+    - node.type.builders
+  module:
+    - image
+    - text
+    - user
+id: node.builders.default
+targetEntityType: node
+bundle: builders
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_builders_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

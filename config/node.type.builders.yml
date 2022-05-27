@@ -1,0 +1,18 @@
+uuid: 13ce2acc-f081-4358-bb22-a338327da024
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Builders
+type: builders
+description: 'Content Builder is our cross-channel content management tool that allows you to consolidate images, documents, and content in a single location for use in the Marketing Cloud. With an easy-to-use, drag and drop interface, Content Builder is more efficient than our previous create and edit tools.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

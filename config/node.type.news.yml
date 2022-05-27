@@ -1,4 +1,4 @@
-uuid: 22d2560f-b4fa-4cba-9daa-90dcb007f22e
+uuid: 01ff7d32-dfcd-46b5-9bce-5ae6bcc3dd9e
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: News
 type: news
-description: News
+description: 'To use Microsoft''s Edge Secure Network built-in VPN, one has to sign in with a Microsoft account. To ensure your browsing experience is protected, you must check the shield icon in the browser frame.'
 help: ''
 new_revision: true
 preview_mode: 1
