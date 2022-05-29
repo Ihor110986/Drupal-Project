@@ -46,14 +46,14 @@ my_module.add_news:
   requirements:
     _permission: 'Access for moderators'
 
-#my_module_news_order.settings:
-#  path: '/admin/config/news/order/settings'
-#  defaults:
-#    _form: '\Drupal\my_module\Form\MyModuleConfigNewsOrderForm'
-#    _title: 'The order of news output'
-#  requirements:
-#    _permission: 'administer site configuration'
-#
+my_module.settings:
+  path: '/admin/config/news/order/settings'
+  defaults:
+    _form: '\Drupal\my_module\Form\MyModuleConfigNewsOrderForm'
+    _title: 'The order of news output'
+  requirements:
+    _permission: 'administer site configuration'
+
 #my_module.template:
 #  path: '/template'
 #  defaults:
