@@ -14,15 +14,15 @@ my_module.get_category:
   requirements:
     _permission: 'access content'
 
-#my_module.news:
-#  path: '/news'
-#  defaults:
-#    _controller: '\Drupal\my_module\Controller\MyNewsConfigController::order_news'
-#    _title: 'News'
-#  requirements:
-#    _permission: 'access content'
+my_module.news:
+  path: '/news'
+  defaults:
+    _controller: '\Drupal\my_module\Controller\MyNewsConfigController::filter_news'
+    _title: 'News'
+  requirements:
+    _permission: 'access content'
 
-#bda.view_news:
+#my_module.view_news:
 #  path: 'news/view'
 #  defaults:
 #    _controller: '\Drupal\my_module\Controller\NewsController::view'
@@ -46,11 +46,11 @@ my_module.add_news:
   requirements:
     _permission: 'Access for moderators'
 
-my_module.settings:
-  path: '/admin/config/news/order/settings'
+my_module_news_filter.settings:
+  path: '/admin/config/news/filter/settings'
   defaults:
     _form: '\Drupal\my_module\Form\MyModuleConfigNewsOrderForm'
-    _title: 'The order of news output'
+    _title: 'The filter of news output'
   requirements:
     _permission: 'administer site configuration'
 
