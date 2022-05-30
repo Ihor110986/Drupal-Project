@@ -16,11 +16,11 @@
 
 
 
-//function my_module_theme($existing, $type, $theme, $path) {
-//    return [
-//        'my-module-template' => [
-//            'variables' => ['test_var' => NULL],
-//        ],
+function my_module_theme($existing, $type, $theme, $path) {
+    return [
+        'my-module-template' => [
+            'variables' => ['test_var' => NULL],
+        ],
 //      'my_example_news' => [
 //        'variables' => [
 //          'title' => NULL,
@@ -28,8 +28,8 @@
 //          'category' => NULL,
 //        ],
 //      ],
-//    ];
-//}
+    ];
+}
 
 
 

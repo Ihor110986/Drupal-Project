@@ -54,14 +54,14 @@ my_module_news_filter.settings:
   requirements:
     _permission: 'administer site configuration'
 
-#my_module.template:
-#  path: '/template'
-#  defaults:
-#    _controller: '\Drupal\my_module\Controller\MyModuleTemplateController::content'
-#    _title: 'Template'
-#  requirements:
-#    _permission: 'access content'
-#
+my_module.template:
+  path: '/template'
+  defaults:
+    _controller: '\Drupal\my_module\Controller\MyModuleTemplateController::content'
+    _title: 'Template'
+  requirements:
+    _permission: 'access content'
+
 #register.form:
 #  path: '/register_form'
 #  defaults:
