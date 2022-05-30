@@ -11,6 +11,8 @@ dependencies:
     - search
     - shortcut
     - system
+    - workflow
+    - workflows
 _core:
   default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
 id: authenticated
@@ -22,7 +24,15 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'administer workflows'
+  - 'create editorial_workflow workflow_transition'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
+  - 'use editorial_workflow transition archive'
+  - 'use editorial_workflow transition create_new_draft'
+  - 'use editorial_workflow transition publish'
+  - 'use editorial_workflow transition ready_for_review'
+  - 'use editorial_workflow transition restore'
+  - 'use editorial_workflow transition restore_to_draft'
   - 'use text format basic_html'

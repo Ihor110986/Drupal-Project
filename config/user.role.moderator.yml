@@ -1,9 +1,12 @@
 uuid: ebdf522f-47b6-4d02-b4d2-76a76d0b3f4c
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - workflow
 id: moderator
 label: Moderator
 weight: 4
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create editorial_workflow workflow_transition'

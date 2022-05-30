@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.news.body
     - field.field.node.news.field_add
     - field.field.node.news.field_category
+    - field.field.node.news.field_da
     - field.field.node.news.field_news_image
     - node.type.news
   module:
@@ -50,3 +51,4 @@ content:
     region: content
 hidden:
   field_add: true
+  field_da: true

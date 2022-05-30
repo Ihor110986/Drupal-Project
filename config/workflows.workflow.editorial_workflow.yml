@@ -1,0 +1,63 @@
+uuid: bc1fa880-1317-46f4-9b57-575086eeb94c
+langcode: en
+status: true
+dependencies:
+  module:
+    - workflows_field
+id: editorial_workflow
+label: 'Editorial workflow'
+type: workflows_field
+type_settings:
+  initial_state: draft
+  states:
+    archived:
+      label: Archived
+      weight: 2
+    draft:
+      label: Draft
+      weight: 0
+    published:
+      label: Published
+      weight: 1
+    review:
+      label: Review
+      weight: 3
+  transitions:
+    archive:
+      label: Archive
+      from:
+        - published
+      to: archived
+      weight: 2
+    create_new_draft:
+      label: 'Create New Draft'
+      from:
+        - draft
+        - published
+      to: draft
+      weight: 0
+    publish:
+      label: Publish
+      from:
+        - draft
+        - published
+      to: published
+      weight: 1
+    ready_for_review:
+      label: 'Ready for review'
+      from:
+        - draft
+      to: review
+      weight: 5
+    restore:
+      label: Restore
+      from:
+        - archived
+      to: published
+      weight: 4
+    restore_to_draft:
+      label: 'Restore to Draft'
+      from:
+        - archived
+      to: draft
+      weight: 3

@@ -1,0 +1,12 @@
+uuid: 62dd4379-60c5-476a-984f-afe6933a72a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflow.workflow.editorial_workflow
+id: editorial_workflow_creation
+label: Creation
+module: workflow
+wid: editorial_workflow
+weight: -50
+sysid: 1
