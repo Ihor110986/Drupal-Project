@@ -1,22 +1,22 @@
 <?php
 
-/**
- * @file
- * Main file for hooks and custom functions.
- */
+///**
+// * @file
+// * Main file for hooks and custom functions.
+// */
 
 //use Drupal\Core\Access\AccessResult;
+//use Drupal\Core\Datetime\DrupalDateTime;
+//use Drupal\Core\Entity\EntityInterface;
 //use Drupal\Core\Field\FieldDefinitionInterface;
 //use Drupal\Core\Field\FieldItemListInterface;
-//use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Form\FormStateInterface;
 //use Drupal\Core\Session\AccountInterface;
-//use Drupal\Core\Datetime\DrupalDateTime;
 //use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
-//use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 
 
 
-function my_module_theme($existing, $type, $theme, $path) {
+function my_module_theme($existing, $type, $theme, $path): array {
     return [
         'my-module-template' => [
             'variables' => ['test_var' => NULL],
@@ -31,34 +31,31 @@ function my_module_theme($existing, $type, $theme, $path) {
     ];
 }
 
+/**
+ * Implements hook_form_alter().
+ */
+function my_module_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'user_login_form') {
+    $form['#submit'][] = 'my_module_user_login_submit';
+  }
+}
 
+// http://web.localhost/user/login
 
-///**
-// * Implements hook_form_alter().
-// */
-//function my_module_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-//    if ($form_id == 'user_login_form') {
-//      $form['#submit'][] = 'my_module_submit_handler';
-//    }
-//  }
+/**
+ * Additional handler for user_login form submit.
+ */
+function my_module_user_login_submit($form, &$form_state) {
+  $roles = \Drupal::currentUser()->getRoles();
+  if (in_array('moderator', $roles)) {
+    $url_content = Drupal\core\Url::fromUserInput('/admin/content');
+    $form_state->setRedirectUrl($url_content);
+  } else {
+    $url_main = Drupal\core\Url::fromUserInput('/');
+    $form_state->setRedirectUrl($url_main);
+  }
+}
 
-///**
-// * Submit Handler for user_login_form.
-// * if the user has the role of moderator - redirect to the page /admin/content,
-// * otherwise redirect to the main.
-// *
-// * @param $form
-// * @param \Drupal\Core\Form\FormStateInterface $form_state
-// */
-//function my_module_submit_handler(&$form, FormStateInterface $form_state) {
-//  $role = \Drupal::currentUser()->getRoles();
-//  if (in_array('moderator', $role)) {
-//    $form_state->setRedirect('system.admin_content');
-//  } else {
-//    $form_state->setRedirect('<front>');
-//  }
-//}
-//
 ///**
 // * Implements hook_entity_presave().
 // */

@@ -16,7 +16,7 @@ RUN pecl install xdebug \
           echo "xdebug.start_with_request=yes"; \
           echo "xdebug.client_host=host.docker.internal"; \
           echo "xdebug.client_port=9000"; \
-          echo "xdebug.idekey=vscode"; \
+          echo "xdebug.idekey=phpstorm"; \
           echo "xdebug.log_level=0"; \
       } > /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini;
 
