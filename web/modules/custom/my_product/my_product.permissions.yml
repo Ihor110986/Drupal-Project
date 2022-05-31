@@ -1,0 +1,3 @@
+administer my product:
+  title: 'Administer my product settings'
+  restrict access: true
