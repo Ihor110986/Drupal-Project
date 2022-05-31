@@ -101,17 +101,17 @@ function bda_hello_entity_access($entity, $operation, $account) {
   return AccessResult::allowed();
 }
 
-/////**
-//// * Implements hook_preprocess_page_title().
-//// */
-////function my_module_preprocess_page_title(&$variables) {
-////
-////  $node = \Drupal::request()->attributes->get('node');
-////
-////  if ($node && $node->bundle() == 'news') {
-////    $variables['title'] = t('News: @title', ['@title' => $node->getTitle()]);
-////  }
-////}
+/**
+ * Implements hook_preprocess_page_title().
+ */
+function my_module_preprocess_page_title(&$variables) {
+
+  $node = \Drupal::request()->attributes->get('node');
+
+  if ($node && $node->bundle() == 'news') {
+    $variables['title'] = t('News: @title', ['@title' => $node->getTitle()]);
+  }
+}
 
 
 
