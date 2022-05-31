@@ -1,26 +1,26 @@
 <?php
-//
-/////**
-//// * @file
-//// * Main file for hooks and custom functions.
-//// */
-//
-////use Drupal\Core\Access\AccessResult;
-////use Drupal\Core\Datetime\DrupalDateTime;
-////use Drupal\Core\Entity\EntityInterface;
-////use Drupal\Core\Field\FieldDefinitionInterface;
-////use Drupal\Core\Field\FieldItemListInterface;
-//use Drupal\Core\Form\FormStateInterface;
-////use Drupal\Core\Session\AccountInterface;
-////use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
-//
-//
-//
-//function my_module_theme($existing, $type, $theme, $path): array {
-//    return [
-//        'my-module-template' => [
-//            'variables' => ['test_var' => NULL],
-//        ],
+
+/**
+* @file
+* Main file for hooks and custom functions.
+*/
+
+//use Drupal\Core\Access\AccessResult;
+//use Drupal\Core\Datetime\DrupalDateTime;
+//use Drupal\Core\Entity\EntityInterface;
+//use Drupal\Core\Field\FieldDefinitionInterface;
+//use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Form\FormStateInterface;
+//use Drupal\Core\Session\AccountInterface;
+//use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
+
+
+
+function my_module_theme($existing, $type, $theme, $path): array {
+    return [
+        'my-module-template' => [
+            'variables' => ['test_var' => NULL],
+        ],
 ////      'my_example_news' => [
 ////        'variables' => [
 ////          'title' => NULL,
@@ -28,8 +28,8 @@
 ////          'category' => NULL,
 ////        ],
 ////      ],
-//    ];
-//}
+    ];
+}
 //
 ///**
 // * Implements hook_form_alter().
