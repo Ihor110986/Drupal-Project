@@ -6,9 +6,9 @@ add news:
   title: 'Access for moderators'
   description: 'Access for moderators'
 
-admin settings:
-  title: 'administer site configuration'
-  description: 'administer site configuration'
+#admin settings:
+#  title: 'administer site configuration'
+#  description: 'administer site configuration'
 
 #view field publication date:
 #  title: 'Access from field publication date'

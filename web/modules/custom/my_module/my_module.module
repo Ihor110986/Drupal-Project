@@ -1,120 +1,120 @@
 <?php
-
-///**
-// * @file
-// * Main file for hooks and custom functions.
-// */
-
-//use Drupal\Core\Access\AccessResult;
-//use Drupal\Core\Datetime\DrupalDateTime;
-//use Drupal\Core\Entity\EntityInterface;
-//use Drupal\Core\Field\FieldDefinitionInterface;
-//use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\Core\Form\FormStateInterface;
-//use Drupal\Core\Session\AccountInterface;
-//use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
-
-
-
-function my_module_theme($existing, $type, $theme, $path): array {
-    return [
-        'my-module-template' => [
-            'variables' => ['test_var' => NULL],
-        ],
-//      'my_example_news' => [
-//        'variables' => [
-//          'title' => NULL,
-//          'content' => NULL,
-//          'category' => NULL,
+//
+/////**
+//// * @file
+//// * Main file for hooks and custom functions.
+//// */
+//
+////use Drupal\Core\Access\AccessResult;
+////use Drupal\Core\Datetime\DrupalDateTime;
+////use Drupal\Core\Entity\EntityInterface;
+////use Drupal\Core\Field\FieldDefinitionInterface;
+////use Drupal\Core\Field\FieldItemListInterface;
+//use Drupal\Core\Form\FormStateInterface;
+////use Drupal\Core\Session\AccountInterface;
+////use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
+//
+//
+//
+//function my_module_theme($existing, $type, $theme, $path): array {
+//    return [
+//        'my-module-template' => [
+//            'variables' => ['test_var' => NULL],
 //        ],
-//      ],
-    ];
-}
-
-/**
- * Implements hook_form_alter().
- */
-function my_module_form_alter(&$form, $form_state, $form_id) {
-  if ($form_id == 'user_login_form') {
-    $form['#submit'][] = 'my_module_user_login_submit';
-  }
-}
-
-// http://web.localhost/user/login
-
-/**
- * Additional handler for user_login form submit.
- */
-function my_module_user_login_submit($form, &$form_state) {
-  $roles = \Drupal::currentUser()->getRoles();
-  if (in_array('moderator', $roles)) {
-    $url_content = Drupal\core\Url::fromUserInput('/admin/content');
-    $form_state->setRedirectUrl($url_content);
-  } else {
-    $url_main = Drupal\core\Url::fromUserInput('/');
-    $form_state->setRedirectUrl($url_main);
-  }
-}
-
-/**
- * Implements hook_entity_presave().
- */
-function my_module_entity_presave($entity) {
-  if ($entity->getEntityTypeId() == 'node' && $entity->getType() == 'news' && $entity->field_date_news->value == '') {
-    if (!$entity->isNew() && $entity->get('status')->getValue() != $entity->original->get('status')->getValue()) {
-      $entity->field_date_news->value = date('Y-m-d') . 'T' . date('h:i:s');
-  }
- }
-}
-
-/**
- * Implements hook_entity_field_access().
- */
-
-function my_module_entity_field_access($operation, $field_definition, $account, FieldItemListInterface $items = NULL) {
-  if ($operation == 'edit' && $field_definition->getName() == 'field_date_news'
-    && !$account->hasPermission('view field date news')) {
-    return AccessResult::forbidden();
-  }
-
-  return AccessResult::neutral();
-}
-
+////      'my_example_news' => [
+////        'variables' => [
+////          'title' => NULL,
+////          'content' => NULL,
+////          'category' => NULL,
+////        ],
+////      ],
+//    ];
+//}
+//
 ///**
-// * Implements hook_entity_access().
+// * Implements hook_form_alter().
 // */
-//function bda_m_entity_access(EntityInterface $entity, $operation, AccountInterface $account) {
-//  if ($entity->getEntityTypeId() == 'node'
-//    && $entity->getType() == 'news'
-//    && $operation == 'view') {
-//    $entityDate = $entity->get('field_publication_date')->date->getTimestamp();
-//    $now = new DrupalDateTime('now');
-//    $now->setTimezone(new \DateTimeZone(DateTimeItemInterface::STORAGE_TIMEZONE));
-//    $now = $now->getTimestamp();
-//    if ($entityDate > $now) {
-//      if (in_array('moderator', $account->getRoles()) ||
-//        $account->id() == $entity->getOwnerId()) {
-//        return AccessResult::neutral();
-//      }
-//      else {
-//        return AccessResult::forbidden();
-//      }
-//    }
-//    return AccessResult::neutral();
+//function my_module_form_alter(&$form, $form_state, $form_id) {
+//  if ($form_id == 'user_login_form') {
+//    $form['#submit'][] = 'my_module_user_login_submit';
+//  }
+//}
+//
+//// http://web.localhost/user/login
+//
+///**
+// * Additional handler for user_login form submit.
+// */
+//function my_module_user_login_submit($form, &$form_state) {
+//  $roles = \Drupal::currentUser()->getRoles();
+//  if (in_array('moderator', $roles)) {
+//    $url_content = Drupal\core\Url::fromUserInput('/admin/content');
+//    $form_state->setRedirectUrl($url_content);
+//  } else {
+//    $url_main = Drupal\core\Url::fromUserInput('/');
+//    $form_state->setRedirectUrl($url_main);
 //  }
 //}
 //
 ///**
-// * Implements hook_preprocess_page_title().
+// * Implements hook_entity_presave().
 // */
-//function my_module_preprocess_page_title(&$variables) {
-//
-//  $node = \Drupal::request()->attributes->get('node');
-//
-//  if ($node && $node->bundle() == 'news') {
-//    $variables['title'] = t('News: @title', ['@title' => $node->getTitle()]);
+//function my_module_entity_presave($entity) {
+//  if ($entity->getEntityTypeId() == 'node' && $entity->getType() == 'news' && $entity->field_date_news->value == '') {
+//    if (!$entity->isNew() && $entity->get('status')->getValue() != $entity->original->get('status')->getValue()) {
+//      $entity->field_date_news->value = date('Y-m-d') . 'T' . date('h:i:s');
 //  }
+// }
 //}
+//
+///**
+// * Implements hook_entity_field_access().
+// */
+//
+//function my_module_entity_field_access($operation, $field_definition, $account, FieldItemListInterface $items = NULL) {
+//  if ($operation == 'edit' && $field_definition->getName() == 'field_date_news'
+//    && !$account->hasPermission('view field date news')) {
+//    return AccessResult::forbidden();
+//  }
+//
+//  return AccessResult::neutral();
+//}
+//
+/////**
+//// * Implements hook_entity_access().
+//// */
+////function bda_m_entity_access(EntityInterface $entity, $operation, AccountInterface $account) {
+////  if ($entity->getEntityTypeId() == 'node'
+////    && $entity->getType() == 'news'
+////    && $operation == 'view') {
+////    $entityDate = $entity->get('field_publication_date')->date->getTimestamp();
+////    $now = new DrupalDateTime('now');
+////    $now->setTimezone(new \DateTimeZone(DateTimeItemInterface::STORAGE_TIMEZONE));
+////    $now = $now->getTimestamp();
+////    if ($entityDate > $now) {
+////      if (in_array('moderator', $account->getRoles()) ||
+////        $account->id() == $entity->getOwnerId()) {
+////        return AccessResult::neutral();
+////      }
+////      else {
+////        return AccessResult::forbidden();
+////      }
+////    }
+////    return AccessResult::neutral();
+////  }
+////}
+////
+/////**
+//// * Implements hook_preprocess_page_title().
+//// */
+////function my_module_preprocess_page_title(&$variables) {
+////
+////  $node = \Drupal::request()->attributes->get('node');
+////
+////  if ($node && $node->bundle() == 'news') {
+////    $variables['title'] = t('News: @title', ['@title' => $node->getTitle()]);
+////  }
+////}
 
 
 
