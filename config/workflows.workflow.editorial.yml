@@ -1,27 +1,34 @@
-uuid: bc1fa880-1317-46f4-9b57-575086eeb94c
+uuid: 1ee60c96-b0c7-4f68-9eda-0486ee643133
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.article
+    - node.type.builders
+    - node.type.news
+    - node.type.page
   module:
-    - workflows_field
-id: editorial_workflow
-label: 'Editorial workflow'
-type: workflows_field
+    - content_moderation
+id: editorial
+label: Editorial
+type: content_moderation
 type_settings:
-  initial_state: draft
   states:
     archived:
       label: Archived
       weight: 2
+      published: false
+      default_revision: false
     draft:
       label: Draft
       weight: 0
+      published: false
+      default_revision: false
     published:
       label: Published
       weight: 1
-    review:
-      label: Review
-      weight: 3
+      published: true
+      default_revision: true
   transitions:
     archive:
       label: Archive
@@ -43,12 +50,6 @@ type_settings:
         - published
       to: published
       weight: 1
-    ready_for_review:
-      label: 'Ready for review'
-      from:
-        - draft
-      to: review
-      weight: 5
     restore:
       label: Restore
       from:
@@ -61,3 +62,9 @@ type_settings:
         - archived
       to: draft
       weight: 3
+  entity_types:
+    node:
+      - article
+      - builders
+      - news
+      - page

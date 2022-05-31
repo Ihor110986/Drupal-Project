@@ -56,12 +56,7 @@ module:
   user: 0
   views_ui: 0
   webform: 0
-  workflow: 0
-  workflow_access: 0
-  workflow_cleanup: 0
-  workflow_devel: 0
   workflows: 0
-  workflows_field: 0
   views: 10
   paragraphs: 11
   minimal: 1000
