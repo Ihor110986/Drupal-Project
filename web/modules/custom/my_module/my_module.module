@@ -71,14 +71,14 @@ function my_module_entity_presave($entity) {
  * Implements hook_entity_field_access().
  */
 
-//function my_module_entity_field_access($operation, $field_definition, $account, FieldItemListInterface $items = NULL) {
-//  if ($operation == 'edit' && $field_definition->getName() == 'field_date_news'
-//    && !$account->hasPermission('view field date news')) {
-//    return AccessResult::forbidden();
-//  }
-//
-//  return AccessResult::neutral();
-//}
+function my_module_entity_field_access($operation, $field_definition, $account, FieldItemListInterface $items = NULL) {
+  if ($operation == 'edit' && $field_definition->getName() == 'field_date_news'
+    && !$account->hasPermission('view field date news')) {
+    return AccessResult::forbidden();
+  }
+
+  return AccessResult::neutral();
+}
 
 ///**
 // * Implements hook_entity_access().

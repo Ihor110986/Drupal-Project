@@ -8,7 +8,7 @@ module: workflow
 options:
   name_as_title: 0
   fieldset: 1
-  options: radios
+  options: select
   schedule_enable: true
   schedule_timezone: 1
   always_update_entity: 0

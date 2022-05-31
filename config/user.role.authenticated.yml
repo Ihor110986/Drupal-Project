@@ -8,11 +8,13 @@ dependencies:
     - comment
     - contact
     - filter
+    - media
     - search
     - shortcut
     - system
     - workflow
     - workflows
+    - workflows_field
 _core:
   default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
 id: authenticated
@@ -36,3 +38,4 @@ permissions:
   - 'use editorial_workflow transition restore'
   - 'use editorial_workflow transition restore_to_draft'
   - 'use text format basic_html'
+  - 'view media'
