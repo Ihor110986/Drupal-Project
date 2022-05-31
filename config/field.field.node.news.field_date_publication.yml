@@ -1,17 +1,17 @@
-uuid: 18ad6f17-bb29-41ec-b984-a97cb4cce088
+uuid: 8423f3fc-6e87-42db-9f58-a02db2fbc637
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_da
+    - field.storage.node.field_date_publication
     - node.type.news
   module:
     - datetime
-id: node.news.field_da
-field_name: field_da
+id: node.news.field_date_publication
+field_name: field_date_publication
 entity_type: node
 bundle: news
-label: 'Date news'
+label: 'Date publication'
 description: ''
 required: false
 translatable: false

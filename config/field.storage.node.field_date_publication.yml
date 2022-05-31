@@ -1,12 +1,12 @@
-uuid: d385e246-f336-4c4f-941a-c906c83c324d
+uuid: 72e9e62d-3e59-45d9-ad3f-e997d72695ef
 langcode: en
 status: true
 dependencies:
   module:
     - datetime
     - node
-id: node.field_da
-field_name: field_da
+id: node.field_date_publication
+field_name: field_date_publication
 entity_type: node
 type: datetime
 settings:

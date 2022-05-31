@@ -10,9 +10,9 @@ add news:
 #  title: 'administer site configuration'
 #  description: 'administer site configuration'
 
-#view field publication date:
-#  title: 'Access from field publication date'
-#  description: 'Permission to view field publication date'
+view field publication date:
+  title: 'Access from field publication date'
+  description: 'Permission to view field publication date'
 #
 #view future news:
 #  title: "Access from view future news"
