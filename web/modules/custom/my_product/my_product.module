@@ -70,6 +70,7 @@ function my_product_user_cancel($edit, UserInterface $account, $method) {
   }
 }
 
+
 /**
  * Implements hook_ENTITY_TYPE_predelete() for user entities.
  */
