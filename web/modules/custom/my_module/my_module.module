@@ -30,32 +30,32 @@ function my_module_theme($existing, $type, $theme, $path): array {
 ////      ],
     ];
 }
-//
-///**
-// * Implements hook_form_alter().
-// */
-//function my_module_form_alter(&$form, $form_state, $form_id) {
-//  if ($form_id == 'user_login_form') {
-//    $form['#submit'][] = 'my_module_user_login_submit';
-//  }
-//}
-//
-//// http://web.localhost/user/login
-//
-///**
-// * Additional handler for user_login form submit.
-// */
-//function my_module_user_login_submit($form, &$form_state) {
-//  $roles = \Drupal::currentUser()->getRoles();
-//  if (in_array('moderator', $roles)) {
-//    $url_content = Drupal\core\Url::fromUserInput('/admin/content');
-//    $form_state->setRedirectUrl($url_content);
-//  } else {
-//    $url_main = Drupal\core\Url::fromUserInput('/');
-//    $form_state->setRedirectUrl($url_main);
-//  }
-//}
-//
+
+/**
+ * Implements hook_form_alter().
+ */
+function my_module_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'user_login_form') {
+    $form['#submit'][] = 'my_module_user_login_submit';
+  }
+}
+
+ http://web.localhost/user/login
+
+/**
+ * Additional handler for user_login form submit.
+ */
+function my_module_user_login_submit($form, &$form_state) {
+  $roles = \Drupal::currentUser()->getRoles();
+  if (in_array('moderator', $roles)) {
+    $url_content = Drupal\core\Url::fromUserInput('/admin/content');
+    $form_state->setRedirectUrl($url_content);
+  } else {
+    $url_main = Drupal\core\Url::fromUserInput('/');
+    $form_state->setRedirectUrl($url_main);
+  }
+}
+
 ///**
 // * Implements hook_entity_presave().
 // */
