@@ -1,0 +1,5 @@
+my_product.add_form:
+  title: 'Add my product'
+  route_name: entity.my_product.add_form
+  appears_on:
+    - entity.my_product.collection
