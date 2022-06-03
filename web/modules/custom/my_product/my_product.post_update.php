@@ -9,7 +9,7 @@ function my_product_post_update_create_page(&$sandbox) {
     'title' => 'Some page',
     'status' => 1,
   ])->save();
-  \Drupal::messenger()->addMessage('Add page');
+  \Drupal::messenger()->addMessage('Added page');
 }
 
 /**

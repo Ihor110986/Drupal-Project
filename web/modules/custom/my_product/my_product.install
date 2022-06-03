@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Create page Your contacts
+ * Create page Our contacts
  */
 function my_product_update_9103(&$sandbox) {
   \Drupal\node\Entity\Node::create([
     'type' => 'page',
-    'title' => 'Your contacts',
+    'title' => 'Our contacts',
   ])->save();
 }
 
