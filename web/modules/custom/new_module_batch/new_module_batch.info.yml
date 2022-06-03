@@ -1,0 +1,5 @@
+name: New Module Batch
+type: module
+description: New Module Batch
+package: Custom
+core_version_requirement: ^9

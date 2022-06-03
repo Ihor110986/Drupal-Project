@@ -1,0 +1,7 @@
+new_module_batch.form:
+  path: '/batch'
+  defaults:
+    _form: '\Drupal\new_module_batch\Form\MyBatchForm'
+    _title: 'Batch processing'
+  requirements:
+    _permission: 'access content'
