@@ -22,6 +22,7 @@
         "drupal/bootstrap": "^3.24",
         "drupal/bootstrap4": "^2.1",
         "drupal/bootstrap5": "^1.1",
+        "drupal/coder": "^8.3",
         "drupal/components": "^2.4",
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-project-message": "^9.3",
@@ -53,10 +54,11 @@
     "config": {
       "sort-packages": true,
       "allow-plugins": {
-        "composer/installers": true,
-        "drupal/core-composer-scaffold": true,
-        "drupal/core-project-message": true
-      }
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     },
     "extra": {
       "drupal-scaffold": {
