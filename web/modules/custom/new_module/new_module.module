@@ -1,0 +1,75 @@
+<?php
+
+use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\datetime\Plugin\Field\FieldType\DateTimeItemInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_cron().
+ */
+function new_module_cron() {
+  $now = new DrupalDateTime('now');
+  $now->setTimezone(new \DateTimeZone(DateTimeItemInterface::STORAGE_TIMEZONE));
+  $now = $now->getTimestamp();
+  $storage = \Drupal::entityTypeManager()->getStorage('node');
+  $data = $storage->getQuery()
+    ->condition('status', 1)
+    ->condition('type', 'news')
+    ->condition('field_archive', 0)
+    ->execute();
+
+  $nodes = $storage->loadMultiple($data);
+
+  foreach ($nodes as $node) {
+    $date_publish = $node->get('field_date_publication')->date->getTimestamp();
+    $diff = $now - $date_publish;
+    if ($diff > 60 * 60 * 24 * 30) {
+      $node->set('field_archive', 1);
+      $node->save();
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function new_module_entity_insert(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() !== 'node' || ($entity->getEntityTypeId() === 'node' && $entity->bundle() !== 'news')) {
+    return;
+  }
+  $mailManager = \Drupal::service('plugin.manager.mail');
+  $module = 'new_module';
+  $key = 'create_news';
+  $to = \Drupal::currentUser()->getEmail();
+  $params['message'] = 'Created new node News';
+  $params['node_title'] = $entity->label();
+  $langcode = \Drupal::currentUser()->getPreferredLangcode();
+  $send = TRUE;
+
+  $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+  if ($result['result'] !== TRUE) {
+    \Drupal::messenger()
+      ->addMessage(t('There was a problem sending your message and it was not sent.'), 'error');
+  }
+  else {
+    \Drupal::messenger()->addMessage(t('Your message has been sent.'));
+  }
+}
+
+/**
+ * Implements hook_mail().
+ */
+function new_module_mail($key, &$message, $params) {
+  $options = [
+    'langcode' => $message['langcode'],
+  ];
+
+  switch ($key) {
+    case 'create_news':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('Node created: @title', ['@title' => $params['node_title']], $options);
+      $message['body'][] = $params['message'];
+      break;
+  }
+}

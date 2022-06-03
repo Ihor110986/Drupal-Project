@@ -34,6 +34,7 @@
         "drupal/paragraphs": "^1.14",
         "drupal/radix": "^4.11",
         "drupal/realistic_dummy_content": "^3.1",
+        "drupal/reroute_email": "^2.1",
         "drupal/simple_sitemap": "^4.1",
         "drupal/swiftmailer": "^2.2",
         "drupal/taxonomy_translator": "^1.0@beta",
@@ -121,4 +122,3 @@
         "squizlabs/php_codesniffer": "^3.6"
     }
 }
-

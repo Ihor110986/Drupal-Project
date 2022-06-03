@@ -41,6 +41,7 @@ module:
   metatag_twitter_cards: 0
   my_clean_text: 0
   my_module: 0
+  new_module: 0
   node: 0
   options: 0
   page_cache: 0
@@ -50,6 +51,7 @@ module:
   rdf: 0
   realistic_dummy_content: 0
   realistic_dummy_content_api: 0
+  reroute_email: 0
   search: 0
   shortcut: 0
   system: 0
