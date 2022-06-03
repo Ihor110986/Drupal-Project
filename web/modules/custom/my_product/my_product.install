@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Create page Your contacts
+ */
+function my_product_update_9100(&$sandbox) {
+  \Drupal\node\Entity\Node::create([
+    'type' => 'page',
+    'title' => 'Your contacts',
+  ])->save();
+}
+
+/**
+ * Add field flag
+ */
+function my_product_update_9101(&$sandbox) {
+  $storage_definition = \Drupal\Core\Field\BaseFieldDefinition::create('boolean')
+    ->setLabel(t('Flag'))
+    ->setDefaultValue(TRUE)
+    ->setSetting('on_label', 'Yes');
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('flag', 'product', 'my_product', $storage_definition);
+}
