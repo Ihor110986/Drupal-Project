@@ -1,0 +1,8 @@
+<?php
+
+
+function beetroot_example_block_alter(&$definitions) {
+  foreach ($definitions as $id => $definition) {
+    $definitions[$id]['admin_label'] .= ' 134';
+  }
+}
