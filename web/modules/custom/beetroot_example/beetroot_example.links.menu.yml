@@ -1,0 +1,4 @@
+example_page:
+  title: 'New Example'
+  route_name: 'example_route'
+  menu_name: main
