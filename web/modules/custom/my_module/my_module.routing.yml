@@ -25,7 +25,7 @@ my_module.news:
 #my_module.view_news:
 #  path: 'news/view'
 #  defaults:
-#    _controller: '\Drupal\my_module\Controller\NewsController::view'
+#    _controller: '\Drupal\my_module\Controllers\NewsController::view'
 #    _title: 'View news'
 #  requirements:
 #    _permission: 'access content'

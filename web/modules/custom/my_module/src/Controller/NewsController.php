@@ -1,8 +1,8 @@
 <?php
 //
-//namespace Drupal\my_module\Controller;
+//namespace Drupal\my_module\Controllers;
 //
-//use Drupal\Core\Controller\ControllerBase;
+//use Drupal\Core\Controllers\ControllerBase;
 //use Drupal\node\Entity\Node;
 //
 //class NewsController extends ControllerBase {
