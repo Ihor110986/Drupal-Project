@@ -38,7 +38,7 @@ class Example extends ControllerBase {
       $body = $node->get('body')->value;
 
     }
-    return new JsonResponse(['hello' => 'world']);
+    return new JsonResponse(['hello' => 'world!']);
   }
 
 }
