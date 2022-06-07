@@ -8,8 +8,22 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class Example extends ControllerBase {
 
   public function view() {
-    $en = $this->entityTypeManager();
-    $storage = $en->getStorage('node');
+    $em = $this->entityTypeManager();
+
+
+    $storage = $em->getStorage('node');
+
+    $node = $storage->create([
+      'type' => 'article',
+      'title' => 'Test node',
+      'body' => [
+        'value' => 'some text',
+        'format' => 'basic_html',
+      ],
+      'status' => 1,
+    ]);
+    $result = $node->save();
+
     $query = $storage->getQuery()
       ->condition('status', 1)
       ->condition('type', 'article')
