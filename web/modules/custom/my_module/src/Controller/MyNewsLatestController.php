@@ -14,9 +14,9 @@ class MyNewsLatestController {
         $view_mode = 'teaser';
         $builder = \Drupal::entityTypeManager()->getViewBuilder($entity_type);
         $storage = \Drupal::entityTypeManager()->getStorage($entity_type);
-        $news = $storage->load(reset($data));
-        $create = $builder->view($news, $view_mode);
-        return $create;
+        $node = $storage->load(reset($data));
+        $build = $builder->view($node, $view_mode);
+        return $build;
     }
 }
 ?>
