@@ -3,15 +3,15 @@
 namespace Drupal\beetroot_example\Controllers;
 
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class Example extends ControllerBase {
 
-  public function view($id) {
+  public function view(NodeInterface $node) {
     $em = $this->entityTypeManager();
 
-    $storage = $em->getStorage('node');
+    $storage = $em->getStorage( 'node');
 
     $query = $storage->getQuery()
       ->condition('status', 1)
@@ -23,10 +23,7 @@ class Example extends ControllerBase {
     /** @var \Drupal\node\NodeInterface $node */
     $node = $storage->load(reset($ids));
 
-    if ($node->hasField('field_flag')) {
-      $body = $node->get('body')->value;
-    }
-    return new JsonResponse(['hello' => 'world']);
+    return new JsonResponse($node->toArray());
   }
 }
 
