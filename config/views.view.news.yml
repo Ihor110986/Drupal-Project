@@ -345,7 +345,7 @@ display:
     display_options:
       display_description: ''
       display_extenders: {  }
-      path: 'Latest 5 news'
+      path: news
       menu:
         type: normal
         title: 'Latest 5 news'
