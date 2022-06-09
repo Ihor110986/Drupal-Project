@@ -33,3 +33,4 @@ hidden:
   field_flag: true
   field_image: true
   field_tags: true
+  langcode: true

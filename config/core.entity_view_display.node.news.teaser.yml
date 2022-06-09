@@ -50,3 +50,4 @@ hidden:
   field_add: true
   field_category: true
   field_date_publication: true
+  langcode: true

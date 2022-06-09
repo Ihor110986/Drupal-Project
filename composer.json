@@ -30,6 +30,7 @@
         "drupal/devel": "^4.1",
         "drupal/diff": "^1.0",
         "drupal/examples": "^3.0",
+        "drupal/languageicons": "^1.0@beta",
         "drupal/metatag": "^1.19",
         "drupal/paragraphs": "^1.14",
         "drupal/radix": "^4.11",

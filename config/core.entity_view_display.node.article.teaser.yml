@@ -52,3 +52,4 @@ hidden:
   body: true
   comment: true
   field_flag: true
+  langcode: true
