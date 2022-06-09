@@ -1,0 +1,22 @@
+uuid: 9d098e26-2b47-463a-87ea-0644f54c2550
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+_core:
+  default_config_hash: h9CUBMbpWVlnaqS3tVNIFFVZouBvfdEZi4MVlmGANpw
+id: paragraph.bp_column_content_w
+field_name: bp_column_content_w
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
