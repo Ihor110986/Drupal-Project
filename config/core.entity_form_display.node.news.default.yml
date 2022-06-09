@@ -49,8 +49,8 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_category:
-    type: entity_reference_autocomplete
-    weight: 123
+    type: entity_reference_autocomplete_tags
+    weight: 126
     region: content
     settings:
       match_operator: CONTAINS

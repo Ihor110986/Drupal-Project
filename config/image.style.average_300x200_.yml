@@ -1,0 +1,15 @@
+uuid: d25bab41-33e9-43cd-9317-11e2e4f9998f
+langcode: en
+status: true
+dependencies: {  }
+name: average_300x200_
+label: Average(300x200)
+effects:
+  8283d598-0730-46c6-8048-e45fff3cdb33:
+    uuid: 8283d598-0730-46c6-8048-e45fff3cdb33
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 200
+      anchor: center-center

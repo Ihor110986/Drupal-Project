@@ -32,14 +32,6 @@ content:
     third_party_settings: {  }
     weight: -20
     region: content
-  field_category:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_news_image:
     type: image
     label: hidden
@@ -56,4 +48,5 @@ content:
     region: content
 hidden:
   field_add: true
+  field_category: true
   field_date_publication: true

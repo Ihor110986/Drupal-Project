@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.news.field_category
     - field.field.node.news.field_date_publication
     - field.field.node.news.field_news_image
+    - image.style.average_300x200_
     - node.type.news
   module:
     - datetime
@@ -24,12 +25,12 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 3
     region: content
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: -20
+    weight: 0
     region: content
   field_add:
     type: entity_reference_label
@@ -37,7 +38,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 104
+    weight: 4
     region: content
   field_category:
     type: entity_reference_label
@@ -45,7 +46,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 103
+    weight: 6
     region: content
   field_date_publication:
     type: datetime_default
@@ -54,20 +55,20 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 105
+    weight: 5
     region: content
   field_news_image:
     type: image
     label: above
     settings:
       image_link: ''
-      image_style: ''
+      image_style: average_300x200_
     third_party_settings: {  }
-    weight: 102
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 2
     region: content
 hidden: {  }

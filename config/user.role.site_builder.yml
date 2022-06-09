@@ -1,0 +1,15 @@
+uuid: b7118fa1-467c-4d38-8e25-e3054c992de6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.news
+  module:
+    - node
+id: site_builder
+label: 'Site builder'
+weight: 5
+is_admin: null
+permissions:
+  - 'create news content'
+  - 'delete own news content'

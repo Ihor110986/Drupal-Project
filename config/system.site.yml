@@ -2,9 +2,9 @@ _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
 uuid: dff4652f-fbd8-4383-8baf-37b9ca4599d3
-name: 'Drush Site-Install'
+name: News
 mail: admin@example.com
-slogan: ''
+slogan: 'News websites are sites devoted to delivering the news in a different format than television, print or radio. News sites include sites that have a large variety of information which may not be considered "news" by all audiences, but may include entertainm'
 page:
   403: ''
   404: ''
@@ -12,3 +12,4 @@ page:
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
+mail_notification: ''
