@@ -1,22 +1,22 @@
-uuid: 49d8ef86-39ea-4e2b-8a64-b169888093a8
+uuid: 673c7d53-4f18-4111-9d03-5a26b15407d0
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:72099652-7437-4680-ab92-ba9d42140b50'
+    - 'block_content:basic:245127ae-ba4c-4e0e-b5df-23cf4bd02618'
   module:
     - block_content
   theme:
     - bootstrap
-id: newsexclusive_2
+id: exclusivenews
 theme: bootstrap
 region: sidebar_first
 weight: 0
 provider: null
-plugin: 'block_content:72099652-7437-4680-ab92-ba9d42140b50'
+plugin: 'block_content:245127ae-ba4c-4e0e-b5df-23cf4bd02618'
 settings:
-  id: 'block_content:72099652-7437-4680-ab92-ba9d42140b50'
-  label: 'News exclusive'
+  id: 'block_content:245127ae-ba4c-4e0e-b5df-23cf4bd02618'
+  label: 'Exclusive news'
   label_display: visible
   provider: block_content
   status: true
