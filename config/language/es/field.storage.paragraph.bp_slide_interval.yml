@@ -1,6 +1,0 @@
-settings:
-  allowed_values:
-    0:
-      label: Ninguno
-    5:
-      label: '5 segundos'
