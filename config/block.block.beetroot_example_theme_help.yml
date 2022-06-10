@@ -1,0 +1,22 @@
+uuid: 9564d52e-840b-41bc-8bc8-9906c90e550b
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - beetroot_example_theme
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: beetroot_example_theme_help
+theme: beetroot_example_theme
+region: help
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

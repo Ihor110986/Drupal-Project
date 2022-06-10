@@ -1,0 +1,24 @@
+uuid: 1ff45779-a468-4643-b8ce-d5ea88475fa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - views
+  theme:
+    - beetroot_example_theme
+id: beetroot_example_theme_views_block__news_block_1
+theme: beetroot_example_theme
+region: sidebar_second
+weight: -6
+provider: null
+plugin: 'views_block:news-block_1'
+settings:
+  id: 'views_block:news-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

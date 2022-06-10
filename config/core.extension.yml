@@ -89,6 +89,7 @@ module:
   webform: 0
   workflows: 0
   ds: 1
+  pathauto: 1
   ds_extras: 2
   content_translation: 10
   views: 10
@@ -101,4 +102,5 @@ theme:
   stable: 0
   classy: 0
   custom_theme: 0
+  beetroot_example_theme: 0
 profile: minimal

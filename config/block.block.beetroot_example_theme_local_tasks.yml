@@ -1,0 +1,22 @@
+uuid: 9bb93655-614d-4430-aec7-e9907a8b13eb
+langcode: en
+status: true
+dependencies:
+  theme:
+    - beetroot_example_theme
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: beetroot_example_theme_local_tasks
+theme: beetroot_example_theme
+region: header
+weight: 10
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }
