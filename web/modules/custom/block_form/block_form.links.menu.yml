@@ -1,0 +1,4 @@
+display_message_page:
+  title: 'Display message'
+  route_name: 'block_form.form_router'
+  menu_name: main

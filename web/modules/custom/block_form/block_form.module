@@ -1,0 +1,24 @@
+<?php
+
+use \Drupal\Core\Form\FormStateInterface;
+
+function testmodule_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  if ($form_id=='comment_comment_form') {
+
+    //add class subject
+    $form['subject']['widget']['0']['value']['#attributes']['class'][]='newclass_subject';
+
+    //add placeholder subject
+    $form['subject']['widget']['0']['value']['#attributes']['placeholder'] = t('Placeholder Subject');
+
+
+    //add class body
+    $form['comment_body']['widget']['0']['#attributes']['class'][]='newclass_body';
+
+    //add placeholder body
+    $form['comment_body']['widget']['0']['#attributes']['placeholder'] = t('Placeholder Body');
+
+  }
+
+}

@@ -1,0 +1,5 @@
+entity.custom_content_entity_type.collection:
+  title: 'Custom content entity types'
+  description: 'Manage and CRUD actions on Custom content entity type.'
+  parent: system.admin_structure
+  route_name: entity.custom_content_entity_type.collection

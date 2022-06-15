@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for custom content entity module.
+ */
+
+use Drupal\Core\Render\Element;
+use Drupal\custom_content_entity\Entity\CustomContentEntity;
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function custom_content_entity_theme() {
+  return [
+    'custom_content_entity' => [
+      'render element' => 'elements',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for custom content entity templates.
+ *
+ * Default template: custom-content-entity.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An associative array containing the custom content entity information and any
+ *     fields attached to the entity.
+ *   - attributes: HTML attributes for the containing element.
+ */
+function template_preprocess_custom_content_entity(array &$variables) {
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+  foreach (Element::children($variables['elements']) as $key) {
+    $variables['content'][$key] = $variables['elements'][$key];
+  }
+}
+
+/**
+ * Implements hook_user_cancel().
+ */
+function custom_content_entity_user_cancel($edit, UserInterface $account, $method) {
+  switch ($method) {
+    case 'user_cancel_block_unpublish':
+      // Unpublish custom content entities.
+      $storage = \Drupal::entityTypeManager()->getStorage('custom_content_entity');
+      $custom_content_entity_ids = $storage->getQuery()
+        ->condition('uid', $account->id())
+        ->condition('status', 1)
+        ->execute();
+      foreach ($storage->loadMultiple($custom_content_entity_ids) as $custom_content_entity) {
+        $custom_content_entity->set('status', FALSE);
+        $custom_content_entity->save();
+      }
+      break;
+
+    case 'user_cancel_reassign':
+      // Anonymize custom content entities.
+      $storage = \Drupal::entityTypeManager()->getStorage('custom_content_entity');
+      $custom_content_entity_ids = $storage->getQuery()
+        ->condition('uid', $account->id())
+        ->execute();
+      foreach ($storage->loadMultiple($custom_content_entity_ids) as $custom_content_entity) {
+        $custom_content_entity->setOwnerId(0);
+        $custom_content_entity->save();
+      }
+      break;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_predelete() for user entities.
+ */
+function custom_content_entity_user_predelete(UserInterface $account) {
+  // Delete custom content entities.
+  $storage = \Drupal::entityTypeManager()->getStorage('custom_content_entity');
+  $custom_content_entity_ids = $storage->getQuery()
+    ->condition('uid', $account->id())
+    ->execute();
+  $custom_content_entities = $storage->loadMultiple($custom_content_entity_ids);
+  $storage->delete($custom_content_entities);
+}

@@ -1,4 +1,4 @@
-my_module.my:
+my_route:
   path: '/my/page'
   defaults:
     _controller: '\Drupal\my_module\Controller\MyController::my'
@@ -15,7 +15,7 @@ my_module.get_category:
     _permission: 'access content'
 
 my_module.news:
-  path: '/news'
+  path: '/news-all'
   defaults:
     _controller: '\Drupal\my_module\Controller\MyNewsConfigController::filter_news'
     _title: 'News'

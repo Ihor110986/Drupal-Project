@@ -1,0 +1,7 @@
+comment_news.router:
+  path: '/comment-news'
+  defaults:
+    _controller: '\Drupal\comment_news\Controller\CommentNewsController::latest_news'
+    _title: 'Comment news'
+  requirements:
+    _permission: 'comment news page'

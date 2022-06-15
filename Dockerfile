@@ -11,14 +11,26 @@ RUN a2enmod rewrite
 RUN pecl install xdebug \
     && docker-php-ext-enable xdebug \
     && { \
-          echo "zend_extension=xdebug"; \
-          echo "xdebug.mode=debug"; \
-          echo "xdebug.start_with_request=yes"; \
-          echo "xdebug.client_host=host.docker.internal"; \
-          echo "xdebug.client_port=9000"; \
-          echo "xdebug.idekey=phpstorm"; \
-          echo "xdebug.log_level=0"; \
-      } > /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini;
+           echo "zend_extension=xdebug";\
+           echo "xdebug.mode=debug"; \
+           echo "xdebug.start_with_request=yes"; \
+           echo "xdebug.client_host=host.docker.internal"; \
+           echo "xdebug.client_port=9000"; \
+           echo "xdebug.idekey=vscode"; \
+       } > /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini;
+    # && docker-php-ext-enable xdebug \
+    #  && { \
+    #        echo "zend_extension=xdebug"; \
+    #        echo "xdebug.mode=debug"; \
+    #        echo "xdebug.start_with_request=yes"; \
+    #        echo "xdebug.client_host=host.docker.internal"; \
+    #        echo "xdebug.client_port=9000"; \
+    #        echo "xdebug.idekey=phpstorm"; \
+    #        echo "xdebug.log_level=0"; \
+    #    } > /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini;
+
+
+
 
 RUN echo "memory_limit=256M" > /usr/local/etc/php/conf.d/docker-php-ext-custom.ini \
     && echo "upload_max_filesize=100M" >> /usr/local/etc/php/conf.d/docker-php-ext-custom.ini \

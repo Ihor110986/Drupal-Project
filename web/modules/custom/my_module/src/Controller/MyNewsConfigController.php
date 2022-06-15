@@ -17,7 +17,7 @@ class MyNewsConfigController {
         ->execute();
 
         $entity_type = 'node';
-        $view_mode = 'full';
+        $view_mode = 'teaser';
         $builder = \Drupal::entityTypeManager()->getViewBuilder($entity_type);
         $storage = \Drupal::entityTypeManager()->getStorage($entity_type);
         $node = $storage->loadMultiple($news_id);

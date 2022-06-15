@@ -1,4 +1,34 @@
-#news_page:
-#   title: 'News'
-#   route_page: 'my_module.view_news'
-#   menu_name: main
+#my_page:
+#  title: 'my'
+#  route_name: my_route
+#  menu_name: main
+
+#get_category_page:
+#  title: 'Get news category'
+#  route_name: 'my_module.get_category'
+#  menu_name: main
+
+news_all_page:
+  title: 'All news'
+  route_name: 'my_module.news'
+  menu_name: main
+
+latest_news_page:
+  title: 'Latest news'
+  route_name: 'my_module.latest_news'
+  menu_name: main
+
+add_news_page:
+  title: 'Add news'
+  route_name: 'my_module.add_news'
+  menu_name: main
+
+news_filter_page:
+  title: 'Filter news'
+  route_name: 'my_module_news_filter.settings'
+  menu_name: main
+
+register_form_page:
+  title: 'Register form'
+  route_name: 'register.form'
+  menu_name: main

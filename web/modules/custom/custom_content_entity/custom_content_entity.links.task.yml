@@ -1,0 +1,26 @@
+entity.custom_content_entity.view:
+  title: 'View'
+  route_name: entity.custom_content_entity.canonical
+  base_route: entity.custom_content_entity.canonical
+entity.custom_content_entity.edit_form:
+  title: 'Edit'
+  route_name: entity.custom_content_entity.edit_form
+  base_route: entity.custom_content_entity.canonical
+entity.custom_content_entity.delete_form:
+  title: 'Delete'
+  route_name: entity.custom_content_entity.delete_form
+  base_route: entity.custom_content_entity.canonical
+  weight: 10
+entity.custom_content_entity.collection:
+  title: 'Custom content entities'
+  route_name: entity.custom_content_entity.collection
+  base_route: system.admin_content
+  weight: 10
+entity.custom_content_entity_type.edit_form:
+  title: 'Edit'
+  route_name: entity.custom_content_entity_type.edit_form
+  base_route: entity.custom_content_entity_type.edit_form
+entity.custom_content_entity_type.collection:
+  title: 'List'
+  route_name: entity.custom_content_entity_type.collection
+  base_route: entity.custom_content_entity_type.collection

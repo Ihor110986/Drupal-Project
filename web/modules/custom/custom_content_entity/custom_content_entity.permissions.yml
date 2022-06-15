@@ -1,0 +1,12 @@
+administer custom content entity types:
+  title: 'Administer custom content entity types'
+  description: 'Maintain the types of custom content entity entity.'
+  restrict access: true
+delete custom content entity:
+  title: Delete custom content entity
+create custom content entity:
+  title: Create custom content entity
+view custom content entity:
+  title: View custom content entity
+edit custom content entity:
+  title: Edit custom content entity

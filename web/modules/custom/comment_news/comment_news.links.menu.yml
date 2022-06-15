@@ -1,0 +1,4 @@
+#comment_news_page:
+#  title: 'Comment news'
+#  route_name: 'comment_news.router'
+#  menu_name: main

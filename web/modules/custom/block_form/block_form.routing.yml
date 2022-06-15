@@ -1,0 +1,7 @@
+block_form.form_router:
+  path: '/display-message'
+  defaults:
+    _form: '\Drupal\block_form\Form\BlockFormDisplayForm'
+    _title: 'Display message'
+  requirements:
+    _permission: 'Access for authenticated user'
