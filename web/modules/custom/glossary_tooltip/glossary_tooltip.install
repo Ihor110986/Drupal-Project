@@ -1,0 +1,37 @@
+<?php
+
+use Drupal\taxonomy\Entity\Vocabulary;
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Add some terms to the Glossary tooltip vocabulary.
+ */
+function glossary_tooltip_update_9145() {
+  $vid = 'glossary_tooltip';
+  $vocabulary = Vocabulary::load($vid);
+  if (!isset($vocabulary)) {
+    Vocabulary::create([
+      'vid' => $vid,
+      'description' => '',
+      'name' => 'Glossary tooltip',
+    ])->save();
+  }
+
+  // Term names to be added.
+  $items = [
+    'Black',
+    'Red',
+    'Green',
+  ];
+  foreach ($items as $item) {
+    $term = Term::create([
+      'parent' => [],
+      'name' => $item,
+      'vid' => $vid,
+      'description' => [
+        'value' => 'description'
+      ],
+    ])->save();
+    }
+}
+?>

@@ -4,4 +4,3 @@ description: Provide some custom taxonomy bulk actions
 package: Custom
 version: 1.0
 core_version_requirement: ^8 || ^9
-#configure: my_module.admin_settings
